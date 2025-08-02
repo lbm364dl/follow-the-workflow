@@ -20,11 +20,9 @@ style guide, these two points directly match with two R packages:
 
   Most code editors incorporate some way of doing this. Since you are most likely
   using RStudio, you can do it by finding the `styler` options in the 'addins' drop-down:
-  ```{r}
-  print("this is code change")
-  ```
 
   ```{r, fig.alt="Use styler package from RStudio", echo=FALSE}
+  print("this is code change")
 knitr::include_graphics("imgs/styler_rstudio.png")
   ```
 
