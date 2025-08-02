@@ -323,6 +323,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span><span class="fu">style_pkg</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Most code editors incorporate some way of doing this. Since you are most likely using RStudio, you can do it by finding the <code>styler</code> options in the ‘addins’ drop-down:</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"this is code change"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "this is code change"</code></pre>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -333,26 +339,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>When using <code>renv</code>, it seems RStudio only shows in the ‘addins’ drop-down the options from packages included in <code>renv</code>, so keep that in mind in case you want it in a different project, that is, if <code>styler</code> does not show up there, it means you do not have it installed in the current <code>renv</code> environment.</p>
 <p>An important thing to keep in mind is that the Tidyverse style guide states lines should have at most 80 characters, but the <code>styler</code> package cannot by itself try to separate a really long single line into several lines to match the 80 character limit. You <em>must</em> fix this anyway, and the usual way for the <code>styler</code> to work is to first manually split some of the code into two lines, and then run the <code>styler</code> again, so it can now split the rest accordingly. For example, you have:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(my_first_long_argument, my_second_long_argument, my_third_long_argument)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(my_first_long_argument, my_second_long_argument, my_third_long_argument)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In this case, if you use <code>styler</code> it may not change anything and still leave this code in a single line, but you can help it a bit by sending the arguments to the next line, like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument, my_second_long_argument, my_third_long_argument)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This does not conform to the standard yet, but now trying to use <code>styler</code> again, it should be able to understand what is going on and split the code accordingly. Depending on the length of the line, it may leave it like this (note the closing parenthesis goes in its own line):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument, my_second_long_argument, my_third_long_argument</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Or if the line was even longer, it would split each argument into its own line:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  my_second_long_argument,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  my_third_long_argument,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  my_fourth_long_argument</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument, my_second_long_argument, my_third_long_argument)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This does not conform to the standard yet, but now trying to use <code>styler</code> again, it should be able to understand what is going on and split the code accordingly. Depending on the length of the line, it may leave it like this (note the closing parenthesis goes in its own line):</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument, my_second_long_argument, my_third_long_argument</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or if the line was even longer, it would split each argument into its own line:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">call_my_incredibly_long_function</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  my_first_long_argument,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  my_second_long_argument,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  my_third_long_argument,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  my_fourth_long_argument</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Any of those should work now, because they successfully follow the 80 character per line limit. If you do not follow the limit, you would fail the <code>lintr</code> check (see next point below).</p></li>
 <li><p><code>lintr</code>: it checks whether the given code/file/project follows the Tidyverse style guide, without making any actual changes. You are responsible for making sure this check passes (probably using <code>styler</code> as explained above), since it will also be automatically checked on your Pull Requests (see the <a href="#automatic-checks-on-pull-requests">next section</a> on this guide). The check we will use is:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_package</span>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">linters =</span> lintr<span class="sc">::</span><span class="fu">linters_with_defaults</span>(<span class="at">object_usage_linter =</span> <span class="cn">NULL</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_package</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">linters =</span> lintr<span class="sc">::</span><span class="fu">linters_with_defaults</span>(<span class="at">object_usage_linter =</span> <span class="cn">NULL</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The default call would be as easy as <code>lintr::lint_package()</code>. I will not go into detail about the specific option added here, but it is there to ignore warnings about undeclared global variables, which are false positives when using <code>dplyr</code> column names. For convenience, if you are following our <a href="https://github.com/lbm364dl/R-example">example repository</a>, you could find this call in <code>inst/scripts/check_lint.R</code>, so if you want to check everything you would just have to run this script.</p>
 <p>In the screenshot above you can see there are also options for <code>lintr</code> checks from Rstudio’s ‘addins’, but by default they perform the <code>lintr::lint_package()</code> call without any options. Remember we added one option to our check, so you should either find out how to change the default behavior or just run the script we included in <code>inst/scripts/check_lint.R</code>.</p></li>
 </ul>
