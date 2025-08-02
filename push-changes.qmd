@@ -1,0 +1,15 @@
+## Pushing our changes
+
+After committing, we now have our changes in local git history, but we should
+probably also add them to the remote GitHub repository. We do this using the command
+```
+git push origin <name-of-branch>
+```
+Now you should be able to see your changes in your own branch from GitHub itself,
+you just need to select your own branch instead of the `main` one.
+
+You should remember to push your changes regularly to the remote repository.
+Otherwise you risk having a bunch of code features in your local computer that
+could be lost if something happened to it. This is aligned with the previous
+suggestion of creating many smaller commits as opposed to giant ones, so that
+you can also push them more frequently.

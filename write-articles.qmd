@@ -1,0 +1,184 @@
+## Writing articles
+
+If you ever got to check some popular R package website
+(e.g. [dplyr](https://dplyr.tidyverse.org/index.html)), you may know there is
+a section called `Articles` at the top, and if you open one of them, you see
+what indeed looks like an article, mixing natural text and code rendering. This
+is ideal if you want to make guides about your package, or some kind of reports
+in general. As you can probably guess, this guide that you are reading was
+built the same way. Luckily this is already very well integrated with the
+R packages workflow, and we will learn how to make our own articles here easily.
+
+Everything that we want to appear in this `Articles` section of the site, should
+be included in the `vignettes/` directory of the package. And inside this
+directory, each file that ends with a `.Rmd` extension will be considered one
+article. The extension name stands for 'R Markdown', which is a mix of R code
+and Markdown text. If you do not know about Markdown you can start with,
+e.g., [this intro](https://www.markdownguide.org/basic-syntax/). Following our
+previous example, we can create a file called `trade-sources-coverage.Rmd`
+with the following code ^[If you copy it, please __remove the _ from starting
+code block lines, e.g., change ```` ```_{r, ...} ```` to ```` ```{r, ...} ````__.
+I cannot render R Markdown code properly inside an R Markdown file itself in
+this guide, because it tries to execute the code block anyway, and this is
+a workaround so that this guide renders properly. Do tell me if you know of
+a correct way to handle this.] (again, thanks to Justin):
+
+````
+---
+title: "Trade sources year coverage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Trade sources year coverage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```_{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```_{r setup}
+library(whep)
+key_path <- here::here(Sys.getenv("GOOGLESHEETS_AUTH_FILE"))
+googlesheets4::gs4_auth(path = key_path)
+```
+
+First we read the trade sources sheet and build a dataframe where each row accounts for one year.
+```_{r}
+# Step 1: Authentication
+sheet_url <- "1UdwgS87x5OsLjNuKaY3JA01GoI5nwsenz62JXCeq0GQ"
+
+# PART 1: trade_sources FOR TRADE
+
+# Step 2: Rest of Program
+expanded_trade_sources <-
+  sheet_url |>
+  googlesheets4::read_sheet(sheet = "Final_Sources_Trade") |>
+  expand_trade_sources()
+```
+
+Now we build some plots.
+
+Plot showing years covered by `expanded_trade_sources`:
+```_{r, fig.alt="Plot showing years covered by expanded_trade_sources"}
+ggplot2::ggplot(
+  expanded_trade_sources,
+  ggplot2::aes(y = Trade, x = Year, fill = "lightblue")
+) +
+  ggplot2::geom_tile(alpha = .8) +
+  ggplot2::theme_dark() +
+  ggplot2::labs(title = "Source Availability by Country") +
+  ggplot2::scale_fill_identity() +
+  ggplot2::facet_wrap(~Reporter, ncol = 1)
+```
+````
+
+The first part of this code, namely the following
+````
+---
+title: "Trade sources year coverage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Trade sources year coverage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```_{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+````
+is metadata and should always be present (just change the article's title). You
+see that just as in Markdown, we can write R code chunks inside triple backticks,
+but the difference here is that this code will be executed, and by default
+we will also be able to see its output in the rendered article.
+
+The next chunk (with the `"r setup"` option) is used for some initialization code
+that you may need throughout the rest of the article. At the time of writing I do not
+really know the implications of writing the `"r setup"` option or writing this code
+in a normal R code chunk (without the option), but it is at least good practice.
+Note that the package being loaded is your own package (called whep in our case).
+
+````
+```_{r setup}
+library(whep)
+key_path <- here::here(Sys.getenv("GOOGLESHEETS_AUTH_FILE"))
+googlesheets4::gs4_auth(path = key_path)
+```
+````
+
+The rest of the code provided is just some usual Markdown text intertwined with
+usual R code chunks. In the special case of code chunks with plots, we will
+get to see the actual plot in the rendered article, and the `fig.alt` option
+is necessary in order not to get an R CMD check warning, and will only be used
+as text which explains the rendered image for people using screen readers or
+in the case it cannot be displayed correctly in a browser.
+
+Now that we have our R Markdown article, we would like to visualize it. There are
+at least two useful R commands for this. The first one creates the whole
+documentation website locally in our computers, and it automatically opens your
+browser on the site. This is simply:
+
+```r
+pkgdown::build_site()
+```
+
+We should now be able to see our article in the 'Articles' section. It should look
+something like the one you can see directly on this site at
+[Trades sources coverage](trade-sources-coverage.html) (with some additional plots).
+
+After running this command once, there is no need to rerun it every time we want
+to see changes, since it takes a bit longer to run. We can instead use a simpler one
+
+```r
+pkgdown::build_articles()
+```
+
+which checks for code changes in articles and only reruns those that have changed.
+I am not completely convinced they are equivalent, since it seems at some point one
+failed and one worked for me, but if you are not doing something strange (like me
+building this guide and writing R Markdown inside R Markdown) it should probably work
+the same.
+
+The `pkgdown::build_articles()` one could still fail with some error indicating
+that the package cannot be loaded. It most likely refers to your own package.
+Since you use code from your own package inside the R markdown, this package
+itself must also be installed. When running `pkgdown::build_site()`, I think
+the package is installed but only in a temporary directory for that execution,
+so maybe it does not work anymore when calling `pkgdown::build_articles()`
+after that. If this is your case, you may want to try installing your own
+package first via `devtools::install()`. Note that this assumes you do not
+change your package code (the one in `R/` directory) while actively working
+on articles. If you do, you would have to reinstall your own package every time
+you change something in the `R/` directory.
+
+As mentioned in a previous section, also remember to include all package
+dependencies your article code uses in the `Suggests` part of the `DESCRIPTION`
+file, so that you do not get errors of packages not being found when building the
+articles or running R CMD check.
+
+This way we can render our articles by default in HTML, which is what browsers
+use. Having your own site is perfect because you can keep it up to date, but
+in case you need it, you should also be able to export an article as PDF. For
+this to work, you first need a LaTeX distribution installed. If you are on
+Windows, you can try MiKTeX
+([maybe start from here](https://miktex.org/howto/install-miktex)). Remember
+to choose "Yes" when asked for "missing packages installation on the fly",
+otherwise our PDF generation from R might fail. Once we have a LaTeX
+distribution installed, we can build a PDF from our article with just a single
+command:
+
+```
+rmarkdown::render("vignettes/my-vignette.Rmd", output_format = "pdf_document")
+```
+
+The output PDF (probably as expected) does not look exactly like the one from
+the site, but it has its own style (LaTeX's style). There are also other valid
+formats, you can look them up if you are curious, but I thought the PDF output
+format would be the most useful one besides the HTML for website generation.

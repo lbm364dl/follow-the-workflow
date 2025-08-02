@@ -1,0 +1,81 @@
+## Writing code
+
+Looking back at the package's file structure, it is in the `R/` directory
+where we will put all the main code. The R files stored here must not
+contain any top-level code, that is, it must all be inside functions.
+We can add more than one function in each file if they are somehow related,
+but there must not be too many either. If a file becomes too large and it
+has several functions inside, consider splitting it into shorter files.
+
+Take the following code as an example, written by our colleague Justin (you do not
+have to understand the code, you can keep reading). We save it in `R/sources.R`.
+```r
+#' Create a new dataframe where each row has a year range into one where each
+#' row is a single year, effectively 'expanding' the whole year range
+#'
+#' @param trade_sources A tibble dataframe
+#' where each row contains the year range
+#'
+#' @returns A tibble dataframe where each row
+#' corresponds to a single year for a given source
+#'
+#' @export
+#'
+#' @examples
+#' trade_sources <- tibble::tibble(
+#'   Name = c("a", "b", "c"),
+#'   Trade = c("t1", "t2", "t3"),
+#'   Info_Format = c("year", "partial_series", "year"),
+#'   Timeline_Start = c(1, 1, 2),
+#'   Timeline_End = c(3, 4, 5),
+#'   Timeline_Freq = c(1, 1, 2),
+#'   `Imp/Exp` = "Imp",
+#'   SACO_link = NA,
+#' )
+#' expand_trade_sources(trade_sources)
+expand_trade_sources <- function(trade_sources) {
+  non_na_cols <- c("Trade", "Timeline_Start", "Timeline_End", "Timeline_Freq")
+  trade_sources |>
+    dplyr::filter(!.any_na_col(non_na_cols)) |>
+    .expand_trade_years() |>
+    dplyr::mutate(
+      Name = dplyr::if_else(
+        Info_Format == "year", paste(Name, Year, sep = "_"), Name
+      ),
+      ImpExp = `Imp/Exp`,
+      In_Saco = as.integer(!is.na(SACO_link)),
+    )
+}
+
+.expand_trade_years <- function(trade_sources) {
+  trade_sources <- dplyr::mutate(trade_sources, No = dplyr::row_number())
+
+  trade_sources |>
+    dplyr::group_by(No) |>
+    tidyr::expand(Year = seq(Timeline_Start, Timeline_End, Timeline_Freq)) |>
+    dplyr::inner_join(trade_sources, by = "No")
+}
+
+.any_na_col <- function(cols_to_check) {
+  dplyr::if_any(dplyr::all_of(cols_to_check), is.na)
+}
+```
+
+In this sample code there are some things to keep in mind:
+
+- All the code is written inside functions, and there are three of them. The
+name of two of them starts with a dot. This is a convention for private functions.
+Private functions are just helpers that are used in other functions from the
+same file, they do not need to be used from outside.
+- The functions that are not private, are then called public, and those are the ones
+that we want to 'export', in the sense that we want to allow for them to be used
+from outside this file. In our `sources.R` example, the first function is public.
+- The public function has a large commented section before it, each line starting
+with `#' `. This is a special type of comment and it is considered documentation.
+Every public function __must__ be documented in the same way (more on this special
+function documentation in the next section). The private functions can be
+introduced by explanatory comments if you consider it necessary, but they should
+be normal comments instead (starting with just `# `, without the single quote).
+
+The most important take from here anyway is that these files should contain all
+the code inside functions and nothing outside them.

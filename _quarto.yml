@@ -1,0 +1,48 @@
+project:
+  type: book
+
+book:
+  title: "Follow the workflow"
+  page-footer:
+    left: |
+      Follow the workflow was written by <a href="https://github.com/lbm364dl">Catalin Covaci</a>.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  chapters:
+    - index.qmd
+    - part: git.qmd
+      chapters:
+        - clone-repo.qmd
+        - pull-remote.qmd
+        - create-branch.qmd
+        - add-changes.qmd
+        - push-changes.qmd
+        - create-pr.qmd
+        - solve-conflicts.qmd
+    - part: r.qmd
+      chapters:
+        - project-structure.qmd
+        - renv.qmd
+        - write-code.qmd
+        - function-docs.qmd
+        - pkg-data.qmd
+        - write-tests.qmd
+        - r-cmd-check.qmd
+        - write-articles.qmd
+        - envs-and-secrets.qmd
+        - code-style.qmd
+        - read-large-files.qmd
+        - pr-auto-checks.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+number-depth: 2
+
+
+

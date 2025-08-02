@@ -1,0 +1,54 @@
+## Cloning the repository
+
+To get started with Git, you need your operating system to recognize Git commands.
+We will assume you are on Windows, so you will have to install Git from
+[here](https://git-scm.com/downloads/win). If you do not know whether it is the 32
+or 64 bits version, you most likely need the 64 bit one. You should now have
+something called 'Git Bash' installed, which is like a command line tool
+(similar to Windows CMD). You can open Git Bash inside a specific directory
+(this is just a technical name for folders and I will use it from now on)
+by right-clicking your desired directory in the file explorer and selecting
+'Open Git Bash here'. However, I would recommend you to learn some basic commands
+to navigate from the command line itself (from now on, __writing `<some-text>` is
+not part of the command__, I just use it as a __placeholder__ for what you need
+to write there):
+
+- Print your current directory:
+  ```
+  pwd
+  ```
+  This is just useful so you can see where you are right now.
+- List files from your current directory:
+  ```
+  ls
+  ```
+  Suppose you do not know the exact path to follow but you know it is inside a
+  certain subdirectory from the one you are in right now. Listing everything in
+  the current directory with `ls` is a useful way to spot which subdirectory
+  you are looking for, so that you can then navigate inside it with `cd`.
+- Move to another directory relative to the one you are in right now:
+  ```
+  cd <relative-path-where-to-move>
+  ```
+
+You can use `ls` and `cd <relative-path>` repeatedly until you are in the
+directory where you want to place a subdirectory containing the repository.
+Again, you can double check that using `pwd`.
+
+We assume here that the repository you want to contribute to already exists.
+You can go to its page on GitHub and copy the URL as seen in the image below:
+
+```{r, fig.alt="Where to copy URL from", echo=FALSE}
+knitr::include_graphics("imgs/copy_repo_url.png")
+```
+
+The git terminology used for 'downloading' a repository to our local file system
+is 'cloning'. We can clone a remote repository (in this case from GitHub)
+using the following command:
+```
+git clone <url-you-copied>
+```
+
+This is called cloning via HTTPS. A browser should open and ask you to introduce
+your GitHub credentials. There are other ways of cloning like SSH, but that is
+out of the scope of this guide.

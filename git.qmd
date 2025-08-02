@@ -1,0 +1,3 @@
+# Use git and GitHub
+
+This is the git and GitHub part.

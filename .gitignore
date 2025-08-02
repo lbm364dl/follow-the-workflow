@@ -1,0 +1,8 @@
+_book
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rdata
+.quarto
+r-pkg_files

@@ -1,0 +1,29 @@
+# Welcome {.unnumbered}
+
+
+::: {.callout-important}
+This book is a work in progress. Many parts are more personally addressed to
+the project I initially wrote this for. I will gradually try to adapt it
+to the general public so it doesn't contain out of context mentions.
+:::
+
+This book was born as an early attempt to introduce researchers to best coding
+practices. Many researchers only write code for themselves, and thus don't feel
+the urge to cleanly organise and share it. The book has two main aims:
+
+- Work with code collaboratively: use git and GitHub.
+- Make your code easily accessible for other programmers: create an R package.
+
+When I started, I didn't know much about R myself, so writing this was also
+helpful to me. It started as a rather short introduction (and I still think it
+is to some extent), but it keeps growing while I learn about new tools that I
+find useful for our workflow.
+
+I don't expect you to read everything linearly. You're encouraged to gradually
+develop your own package or contribute to an existing one and come back here
+when you need some help or a refresher. You can also use the search bar at the
+top left to look for specific keywords and find the relevant parts in the book.
+Reading code from other experienced programmers can also get you quite far
+without diving too deep into passively reading texts like this. If that sounds
+appealing, I recommend checking the source code for R packages from
+[tidyverse](https://github.com/tidyverse) or [rOpenSci](https://github.com/ropensci).

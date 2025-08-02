@@ -1,0 +1,33 @@
+## Project structure
+
+It seems clear that even though we would work fine with bare R scripts that are run
+directly, when working on a large project it makes sense to have some kind of
+file structure, to keep everything organized. You can build your ad-hoc file
+structures, and you could probably come up with something rather simple. Here,
+instead, we will focus on using the standard structure of an R package. This
+is a standard everyone has to follow if they want their projects to turn into
+packages which can be publicly downloaded by anyone from the
+[CRAN repositories](https://cran.r-project.org/). Just the same way you do, e.g.,
+`install.packages(tidyverse)` to install all Tidyverse packages, if you
+follow this standard R package structure, you can upload your package and one could do
+`install.packages(your_package)` the same way.
+
+Even if you do not want to upload a package, there are still advantages if you
+follow this structure. This is the one we will follow, so the rest of this section
+will try to explain its different parts, that will all become part of our workflow.
+
+This is the whole structure of an R package:
+
+```{r, fig.alt="Structure of an R package", echo=FALSE}
+knitr::include_graphics("imgs/r_package_structure.png")
+```
+
+Luckily, there are a lot of files there that you do not need to know about,
+at least for now, so we will try to explain the most important ones in the
+next sections.
+
+There is a whole [R packages book](https://r-pkgs.org/) which
+I followed myself to setup the basics for our project. It is very well
+written and available for free online, so if you are interested in knowing
+more about R packages and their project structure, I recommend checking the
+book.

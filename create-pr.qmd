@@ -1,0 +1,63 @@
+## Creating a pull request
+
+Suppose you are done with your changes and you want to add these to the main
+branch. Mixing one branch with another is known as 'merging'. In this case we would
+like to merge our new branch with the main branch. This can be done forcefully, but
+the common practice we will be following is to create what is known as a 'Pull
+request' from our branch into the main one, and we do this directly from GitHub,
+once we have pushed all of our changes.
+
+```{r, fig.alt="Click 'New pull request' in GitHub", echo=FALSE}
+knitr::include_graphics("imgs/new_pull_request.png")
+```
+
+```{r, fig.alt="Click 'Create pull request'", echo=FALSE}
+knitr::include_graphics("imgs/create_pull_request.png")
+```
+
+Here you can see all the changes you made (that differ from the main branch) before
+clicking again 'Create pull request'. Then you will see the following, where you
+should add some title and description to explain what you have done. You finally
+click 'Create pull request' again.
+
+```{r, fig.alt="Add title and description and click 'Create pull request'", echo=FALSE}
+knitr::include_graphics("imgs/add_pr_title_description.png")
+```
+
+Now the Pull Request (often abbreviated as PR) is created and the next step is to
+ask for someone's review.
+
+```{r, fig.alt="Adding people to review your PR", echo=FALSE}
+knitr::include_graphics("imgs/add_people_review_pr.png")
+```
+
+Ideally these changes would not be merged until someone else reviews your code.
+This person might find things you have to change and request these changes before
+merging, so you would have to keep working on your branch until they are satisfied.
+Then they would accept your changes and you would be ready to merge your branch
+into the main one, and the process would be done.
+
+However, sometimes there is
+an additional step that must be passed before merging, which is related to
+automatic code checks, e.g. check whether your code is well formatted and
+whether it passes all tests successfully. If configured, these can run
+automatically when creating a Pull Request. We will indeed work with them, but we
+will explain these automatic checks better in the
+[Automatic checks on Pull Requests section](#automatic-checks-on-pull-requests).
+
+While working on your own branch, others may have merged their own branches
+into the main branch and then your own branch would be outdated. When creating
+a Pull Request yourself, you should make sure your branch is also up to date with
+everything already on the main branch. Recall from
+[the pulling remote changes section](#pulling-remote-changes) that we can do this
+with the command
+```
+git pull origin main
+```
+Even if you are locally on your own branch and directly try to fetch changes from
+a different remote one (in this case `main`), this works as expected, that is,
+it tries to merge all new changes from the `main` branch into your own local one.
+This automatic merge works most of the times, but sometimes you may find conflicts,
+because the program does not know how to combine everything neatly. If this happens,
+you must manually check which parts of the code should be kept. In the next section
+we explain how to solve conflicts.
