@@ -17,15 +17,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Check for _freeze folder
-        run: |
-          ls -la
-
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUARTO_PRINT_STACK: true
-          QUARTO_LOG_LEVEL: DEBUG

@@ -36,7 +36,7 @@ book:
         - read-large-files.qmd
         - pr-auto-checks.qmd
 execute:
-  freeze: true
+  freeze: auto
 
 format:
   html:
