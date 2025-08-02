@@ -1,0 +1,15 @@
+{
+  "hash": "e64f0eb606db9e405637208655912afc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## Creating our own branch\n\nAfter the pull, we are now safely up to date with the remote changes. Now it is\ntime to learn how to create our own 'branch', from which we will start working\non new code. We use the following command:\n```\ngit checkout -b <name-of-branch>\n```\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/branch_creation_command.png){fig-alt='Using branch creation command'}\n:::\n:::\n\n\nThe command `git checkout <name-of-branch>` is used to change from one branch\nto another (so that you will now see the files and changes that are in that\nbranch). Additionally, if we add the `-b` option, it will create the branch with\nthe given name if it does not already exist, which is our case in this example.\nThe branch name should be something like `author/name-of-branch`. Thus, some\ncommon practices for naming your branches (and that we should follow) are:\n\n- They do not contain caps (all lowercase)\n- Words are separated with dashes (`-`)\n- The name includes the author and some descriptive name separated by a slash (`/`)\n- The descriptive name should ideally start with an action (a verb) in imperative\nstyle (fix, create, test...).\n\nIf Ermenegildo wants to create some code for preprocessing bilateral trade data,\nan acceptable branch name could be `ermenegildo/preprocess-bilateral-trade-data`.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

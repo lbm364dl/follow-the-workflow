@@ -1,0 +1,15 @@
+{
+  "hash": "f4084e51d7015a2b675c8387872c631f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## Adding changes to our branch\n\nNow you are in your own branch and you can start working on your changes. While\nyou work on them, you should keep track of changes with git. We can add all\nchanges using the command\n```\ngit add .\n```\nHere the dot means 'this directory', which essentially adds all new changes, i.e.\nall things inside the directory. We can add just a specific file instead using\nthe command\n```\ngit add <relative-name-of-file>\n```\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/add_all_git_changes.png){fig-alt='Add all git changes'}\n:::\n:::\n\n\nAfter adding our changes, we must 'commit' them. This commit step is what actually\nsaves your changes in the git history. You do this with the command\n```\ngit commit -m 'Some descriptive message for your changes'\n```\nA common practice for commit messages is to start them with a verb in infinitive\n(imperative style), indicating an action that was performed, e.g.,\n`'Create tests for bilateral trade data preprocessing'`.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/commit_changes.png){fig-alt='Commit the changes'}\n:::\n:::\n\n\nA common practice is to make small commits, that is, include just a few changes\nin each commit, so that it is easier to keep track of your work's history, instead\nof just having a single commit when you are done with everything. Ultimately, the\namount of commits is your decision, but should not be just one commit per branch.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

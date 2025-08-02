@@ -1,0 +1,15 @@
+{
+  "hash": "9bc9dad525a7a971e7c7e35d55d5e19f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## Pulling remote changes\n\nNow a new directory should have been created with the content of the repository\nin your local file system. From now on we will see the basic git commands that\nyou would need in daily usage. We assume you are inside the repository. We\nexplain them with an example.\n\nSuppose you want to start contributing to this repository. A good practice\n(and one that we will enforce to use) is to make your own code changes in a\n'different place' than the ones you currently see in the repository. The things\nyou see now are in what it is called the 'main branch', and you will make your\ncode changes in a 'new branch', which will start with the same content as the\nmain one, but will then evolve with different changes. If you have not done\nanything yet, you should be in the main branch (maybe it is called 'main' or\n'master', these are just conventions, but I will assume it is called 'main').\nYou can use the command `git status` to check this (do not mind that my terminal\nlooks different in the screenshots, you can use the same commands in Git Bash):\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/git_status_command.png){fig-alt='Using git status'}\n:::\n:::\n\n\nYour local version of a repository does not need to match the remote version\n(the one we store in GitHub in this case), but before you start your work on\na new branch, you should keep your main branch up to date in case someone\nadded new code in the GitHub repository since the last time you checked. We\nget any new remote changes to the local repository by using the command\n```\ngit pull\n```\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/git_pull_command.png){fig-alt='Using git pull outputs \\'Already up to date\\''}\n:::\n:::\n\n\nIn this case I already had all the remote changes, and that is why the message\nsays 'Already up to date', but the message will be different if you had missing\nchanges. This is the 'easy way' to do it. The command `git pull` tries to\nfetch changes from the equivalent remote branch, i.e., the one that has the same\nname on remote as it has on your local repository. This may not always work as\nexpected so there is a way to always specify from which remote branch you\nwant to get these changes (and I highly recommend always using it explicitly):\n```\ngit pull origin <name-of-remote-branch>\n```\nFor example, imagine you asked someone for help on your own branch and they\nadded some new changes on your branch, that you do not have locally. Then,\nif your branch is called `my-branch`, and you are already on your branch\nlocally, you would want to use the command\n```\ngit pull origin my-branch\n```\nLikewise, for the first example shown here (keeping the main branch updated),\nI would always be explicit:\n```\ngit pull origin main\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

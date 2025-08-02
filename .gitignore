@@ -4,5 +4,5 @@ _book
 .RData
 .Ruserdata
 .Rdata
-.quarto
 r-pkg_files
+/.quarto/

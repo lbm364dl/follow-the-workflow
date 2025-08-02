@@ -35,6 +35,8 @@ book:
         - code-style.qmd
         - read-large-files.qmd
         - pr-auto-checks.qmd
+execute:
+  freeze: auto
 
 format:
   html:

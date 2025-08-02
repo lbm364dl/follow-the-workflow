@@ -1,0 +1,21 @@
+{
+  "hash": "4f6b853977b3d2337b67fe7d0985fec5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## Automatic checks on Pull Requests\n\nBy this point we assume you are already done with all your new code, you documented\nand tested it, or perhaps you just created some report in the form of an article. As\nwe have seen in the [Git intro](#git-intro), it is now time to create a Pull\nRequest so that someone else reviews what you have done. But when you create the\nPull Request, our workflow is designed so that two checks are run automatically on\nGitHub, each time you push your changes to a branch which has an open Pull Request:\n\n- First, the R CMD check is performed. We have seen in a previous section how you can\nrun it locally, so you should have made sure it outputs no errors. Otherwise, you\nwill see this step failing.\n- Then, a linting check is performed. We have also seen how to autoformat your code,\nso that it follows the R code styling standards, and how to make sure that it is\nindeed well formatted. Otherwise, you will see this step failing.\n\nIf any of the steps above fail, you will see something like this in your PR page:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/github_action_fail.png){fig-alt='GitHub Action check fails'}\n:::\n:::\n\n\nOtherwise, if both checks succeeded, you will see something like:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/github_action_pass.png){fig-alt='GitHub Action check succeeds'}\n:::\n:::\n\n\nOverall, you should be able to see this at the bottom of the PR:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/all_pr_ok.png){fig-alt='GitHub Action Pull Request passed'}\n:::\n:::\n\n\nIn case you are wondering, both checks we mentioned before are actually done\nin a single GitHub automatic step (these steps are called 'GitHub actions'),\nso it should say '1 successful check' instead of '2 successful checks'.\nHowever, there is an additional GitHub action there, which essentially\njust updates the documentation site (only when the PR is actually merged into\nthe main branch). This is not relevant to you as a developer but it makes the\noverall workflow easier, since the project documentation is automatically updated\nwithout any more human intervention. If you want to know more about this\nautomatic site update you can check this\n[section from the R Packages book](https://r-pkgs.org/website.html).\n\nRecall that for a PR to be accepted and merged into the main branch, it must\nalso be reviewed by another developer. A good practice would be to make sure the\nGitHub checks pass before even asking for someone's reviewing, because if any\ncheck failed you most likely need to add more code changes to fix them, so some\nof the code the reviewer could have checked before could become obsolete, and\nthey would have to read it again, so we better avoid that.\n",
+    "supporting": [
+      "pr-auto-checks_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
