@@ -27,3 +27,8 @@ Reading code from other experienced programmers can also get you quite far
 without diving too deep into passively reading texts like this. If that sounds
 appealing, I recommend checking the source code for R packages from
 [tidyverse](https://github.com/tidyverse) or [rOpenSci](https://github.com/ropensci).
+
+This book is prepared with [Quarto](https://quarto.org/), but I also used git and R!
+The book is open source and stored in GitHub. If you find any mistake or some part
+that can be improved, you can contribute! Look for the _Edit this page_ button,
+which will take you to GitHub to easily suggest changes.
