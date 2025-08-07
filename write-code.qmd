@@ -1,5 +1,7 @@
 ## Writing code
 
+### Create your functions
+
 Looking back at the package's file structure, it is in the `R/` directory
 where we will put all the main code. The R files stored here must not
 contain any top-level code, that is, it must all be inside functions.
@@ -79,3 +81,39 @@ be normal comments instead (starting with just `# `, without the single quote).
 
 The most important take from here anyway is that these files should contain all
 the code inside functions and nothing outside them.
+
+### Run your functions
+
+This might seem like a naive question. Of course, we run the code as we always do!
+If we're in RStudio, we select code and click the _Run_ button, right?
+Well, although you can technically you that, it's not recommended to use it
+when trying to run functions from your package. Instead, there is a special function
+that directly loads *all* the functions from your package into your environment,
+so that you can easily access them. The command is
+
+```r
+devtools::load_all()
+```
+
+Once you start working on R packages, this should become a habit for you. Every time
+you make some change in one of your functions, you'll have to write `devtools::load_all()`
+in your R session to have the latest version of the functions available. Then you can
+use them.
+
+If something ever goes wrong and you have no idea what's going on, the first thing you
+should try is:
+
+1. Clean your R session. There's an option for that in RStudio in the form of a broom
+  icon. But you can achieve the same result by calling this from your R session:
+
+  ```r
+  rm(list = ls(all.names = TRUE))
+  ```
+
+2. Try loading everything again with `devtools::load_all()`.
+3. Try to do again whatever failed before.
+
+Of course this will only fix your problems if they were produced because you mistakenly
+loaded something manually instead of using `devtools::load_all()`. This is probably
+the most important command you'll use while working on an R package. Please remember
+that.
