@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-5fd9db47a040b21ac2cac9a0b3b722ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -292,8 +292,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#create-your-functions" id="toc-create-your-functions" class="nav-link active" data-scroll-target="#create-your-functions">Create your functions</a></li>
+  <li><a href="#run-your-functions" id="toc-run-your-functions" class="nav-link" data-scroll-target="#run-your-functions">Run your functions</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/write-code.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -317,6 +324,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="create-your-functions" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-functions">Create your functions</h3>
 <p>Looking back at the package’s file structure, it is in the <code>R/</code> directory where we will put all the main code. The R files stored here must not contain any top-level code, that is, it must all be inside functions. We can add more than one function in each file if they are somehow related, but there must not be too many either. If a file becomes too large and it has several functions inside, consider splitting it into shorter files.</p>
 <p>Take the following code as an example, written by our colleague Justin (you do not have to understand the code, you can keep reading). We save it in <code>R/sources.R</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Create a new dataframe where each row has a year range into one where each</span></span>
@@ -375,8 +384,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The public function has a large commented section before it, each line starting with <code>#'</code>. This is a special type of comment and it is considered documentation. Every public function <strong>must</strong> be documented in the same way (more on this special function documentation in the next section). The private functions can be introduced by explanatory comments if you consider it necessary, but they should be normal comments instead (starting with just <code>#</code>, without the single quote).</li>
 </ul>
 <p>The most important take from here anyway is that these files should contain all the code inside functions and nothing outside them.</p>
+</section>
+<section id="run-your-functions" class="level3">
+<h3 class="anchored" data-anchor-id="run-your-functions">Run your functions</h3>
+<p>This might seem like a naive question. Of course, we run the code as we always do! If we’re in RStudio, we select code and click the <em>Run</em> button, right? Well, although you can technically you that, it’s not recommended to use it when trying to run functions from your package. Instead, there is a special function that directly loads <em>all</em> the functions from your package into your environment, so that you can easily access them. The command is</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Once you start working on R packages, this should become a habit for you. Every time you make some change in one of your functions, you’ll have to write <code>devtools::load_all()</code> in your R session to have the latest version of the functions available. Then you can use them.</p>
+<p>If something ever goes wrong and you have no idea what’s going on, the first thing you should try is:</p>
+<ol type="1">
+<li>Clean your R session. There’s an option for that in RStudio in the form of a broom icon. But you can achieve the same result by calling this from your R session:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all.names =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Try loading everything again with <code>devtools::load_all()</code>.</li>
+<li>Try to do again whatever failed before.</li>
+</ol>
+<p>Of course this will only fix your problems if they were produced because you mistakenly loaded something manually instead of using <code>devtools::load_all()</code>. This is probably the most important command you’ll use while working on an R package. Please remember that.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -798,7 +824,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/write-code.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/write-code.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
