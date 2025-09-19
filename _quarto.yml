@@ -35,6 +35,7 @@ book:
         - code-style.qmd
         - read-large-files.qmd
         - pr-auto-checks.qmd
+  downloads: [pdf, epub]
 execute:
   freeze: auto
 
@@ -43,6 +44,8 @@ format:
     theme:
       - cosmo
       - brand
+  pdf: default
+  epub: default
 
 number-depth: 2
 

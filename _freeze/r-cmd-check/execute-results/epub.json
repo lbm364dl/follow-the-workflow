@@ -1,0 +1,21 @@
+{
+  "hash": "041319460e64e1a62a5a1f3f44ead3d5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## R CMD Check\n\nThere is a standard tool that contains several steps ('checks') which every\nproject that wants to be a package uploaded to\n[CRAN repositories](https://cran.r-project.org/) must pass. As part of our\ncode workflow, you are also responsible to make this check pass, as we will\nalso see in the\n[Automatic checks on Pull Requests](#automatic-checks-on-pull-requests) section.\nThis check is known as 'R CMD check', and it is actually very easy to run:\n\n```r\ndevtools::check()\n```\n\nThe whole output of this call is rather long, since it lists all the\ndifferent checks it makes, but at the end, if there are no issues,\nthis is the output you should see:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/r_cmd_check_pass.png){fig-alt='Correct output of R CMD check'}\n:::\n:::\n\n\nOK, but if you just followed the steps in this guide and included our example\ncode from the [Writing code](#writing-code) and [Writing tests](#writing-tests)\nsections, the above check should not have ended successfully with 0 errors,\nand you probably see (among the really large output), some error like this:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/r_cmd_check_fail.png){fig-alt='Error no package called tidyr'}\n:::\n:::\n\n\nThe problem here is that before performing the check on your package, it\nmust build it. And for that, it must know which other packages it has\nas dependencies. Again, if you just followed everything from here, we never\ngot to do that, so your built package just does not include any other packages.\nTo fix this, we must have a quick look at the `DESCRIPTION` file.\n\n```markdown\nPackage: whep\nTitle: What the Package Does (One Line, Title Case)\nVersion: 0.0.0.9000\nAuthors@R:\n    person(\"First\", \"Last\", , \"first.last@example.com\", role = c(\"aut\", \"cre\"))\nDescription: What the package does (one paragraph).\nLicense: MIT + file LICENSE\nImports:\n    dplyr,\n    tidyr\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote: 7.3.2\nSuggests:\n    knitr,\n    rmarkdown,\n    testthat (>= 3.0.0),\n    tibble,\n    ggplot2,\n    here,\n    googlesheets4\nConfig/testthat/edition: 3\nVignetteBuilder: knitr\nURL: https://eduaguilera.github.io/whep/\n```\n\nIn the above file, the `Imports` section is where we should make sure we have\nall dependencies for code which was saved specifically in the `R/` directory.\nOn the other hand, dependencies for code written in other places, such as\n`tests/` or `vignettes/` (we will see this one in the following\n[Writing articles](#writing-articles) section), should be included in the\n`Suggests` section of the `DESCRIPTION` file. Together these two fields\ntell everyone which dependencies our package needs to work correctly.\nAfter adding these, you could run again `devtools::check()` and confirm\nthat it does not fail anymore (at least no errors).\n\nWe will not go into detail as to which checks are being performed. We will\nall slowly learn about them whenever they show up as real issues in our code\nwhen running the check tool. Just keep in mind that one of the important points\nis that all the tests you write are also executed here, and the 'R CMD check'\nalso fails if one of your tests fail. If you really want to know more about\nthe checks, you can read, e.g.,\n[this detailed list](https://r-pkgs.org/R-CMD-check.html).\n",
+    "supporting": [
+      "r-cmd-check_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "hash": "0b44e298967d566533a35a677cd25151",
+  "result": {
+    "engine": "knitr",
+    "markdown": "## Project structure\n\nIt seems clear that even though we would work fine with bare R scripts that are run\ndirectly, when working on a large project it makes sense to have some kind of\nfile structure, to keep everything organized. You can build your ad-hoc file\nstructures, and you could probably come up with something rather simple. Here,\ninstead, we will focus on using the standard structure of an R package. This\nis a standard everyone has to follow if they want their projects to turn into\npackages which can be publicly downloaded by anyone from the\n[CRAN repositories](https://cran.r-project.org/). Just the same way you do, e.g.,\n`install.packages(tidyverse)` to install all Tidyverse packages, if you\nfollow this standard R package structure, you can upload your package and one could do\n`install.packages(your_package)` the same way.\n\nEven if you do not want to upload a package, there are still advantages if you\nfollow this structure. This is the one we will follow, so the rest of this section\nwill try to explain its different parts, that will all become part of our workflow.\n\nThis is the whole structure of an R package:\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](imgs/r_package_structure.png){fig-alt='Structure of an R package'}\n:::\n:::\n\n\nLuckily, there are a lot of files there that you do not need to know about,\nat least for now, so we will try to explain the most important ones in the\nnext sections.\n\nThere is a whole [R packages book](https://r-pkgs.org/) which\nI followed myself to setup the basics for our project. It is very well\nwritten and available for free online, so if you are interested in knowing\nmore about R packages and their project structure, I recommend checking the\nbook.\n",
+    "supporting": [
+      "project-structure_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
