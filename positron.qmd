@@ -1,0 +1,17 @@
+# Bye RStudio, welcome Positron
+
+To be fair, I would've preferred this title to be _Bye RStudio, welcome [Neovim](https://github.com/neovim/neovim)_. Yes, my editor is directly inside a command line. Yes, I know it's not the first thing you think about for beginners. For this reason, you're going to join me in this journey where we learn together how to use [Positron](https://positron.posit.co/).
+
+Positron is a code editor made by the same people who developed RStudio. They're trying to build a more general code editor for data science, similar to [Visual Studio Code](https://code.visualstudio.com/), if you even know about that one. Why move away from RStudio you say? I don't know! I'm going to trust these guys, and you should give them a chance too. If you're completely against the idea and want to keep using RStudio, you'll have to fill some gaps by yourself in this guide.
+
+We need to start, of course, by [installing this Positron thing](https://positron.posit.co/download.html).
+
+::: {.callout-tip}
+
+If you're a Windows ~~enjoyer~~ user and you have one of those work computers that don't let you install anything without asking for an admin password that takes 17 weeks to get, choose _user level install_. User level installations don't require an admin password. Let's thank every developer that invests their precious time in making their app installable without admin rights.
+
+:::
+
+You'll somehow learn how to use this code editor. No big deal. For now I just want to show you one thing. You press the keys `ctrl shift p` to get a small menu with "commands". You can run many different things from here. I think it's the easiest way to do it. We might use that a few times in the guide. It's also helpful for me because that way I won't have headaches trying to find out where that specific command appears in the interface. Just write the description of the command and it will appear. Here, an example:
+
+![Searching Positron commands](imgs/positron-commands.png)

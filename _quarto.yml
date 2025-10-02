@@ -35,6 +35,10 @@ book:
         - code-style.qmd
         - read-large-files.qmd
         - pr-auto-checks.qmd
+    - part: papers.qmd
+      chapters:
+        - positron.qmd
+        - quarto.qmd
   downloads: [pdf, epub]
 execute:
   freeze: auto
@@ -44,6 +48,7 @@ format:
     theme:
       - cosmo
       - brand
+    css: styles.css
   pdf: default
   epub: default
 

@@ -1,0 +1,9 @@
+.quarto-figure figcaption {
+  text-align: center;
+}
+
+.right-quote blockquote {
+  text-align: right;
+  border-left: none;
+  margin-bottom: 40px;
+}

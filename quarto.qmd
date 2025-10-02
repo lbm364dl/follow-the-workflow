@@ -1,0 +1,13 @@
+# Embrace Quarto
+
+:::{.right-quote}
+> "LaTeX is a document preparation system. Microsoft Word is a document destruction system."
+>
+> — Leslie Lamport, creator of LaTeX, just maybe, while having lunch with Genghis Khan.
+:::
+
+Enough talking about the editor. We want to write papers. How? [Quarto](https://quarto.org/). Yes, I could write some boring introduction about Quarto here. Just go and take a look at their site's home page. When you're satisfied come back. If you're not satisfied, please also come back. Let's at least run one example before you decide to go back to Microsoft Word.
+
+If you've tried to submit some papers in journals, you might have heard about this thing called LaTeX even if you never used it. It's one format they typically accept. It's a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.
+
+Beautiful PDFs come from ugly LaTeX files. Yes, I mean, there's a lot of unnecessary jargon in a LaTeX file that you probably don't care about. I won't try to defend LaTeX. You just want to write your document, don't you?
