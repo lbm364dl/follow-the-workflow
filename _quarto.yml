@@ -3,6 +3,8 @@ project:
 
 book:
   title: "Follow the workflow"
+  author: "Catalin Covaci"
+  site-url: "https://lbm364dl.github.io/follow-the-workflow"
   repo-url: https://github.com/lbm364dl/follow-the-workflow
   repo-actions: [edit, issue]
   page-footer:
