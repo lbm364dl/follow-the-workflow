@@ -39,6 +39,11 @@ book:
       chapters:
         - positron.qmd
         - quarto.qmd
+        - quarto-syntax.qmd
+        - citations.qmd
+        - paper-git.qmd
+        - trackdown.qmd
+        - templates.qmd
   downloads: [pdf, epub]
 execute:
   freeze: auto
