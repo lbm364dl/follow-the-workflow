@@ -1,0 +1,21 @@
+# But how do I cite my people?
+
+You know clickbait is effective...
+
+If you already read the previous chapter, I hope you already found about the _Insert citation_ button in visual mode. There you go. Next chapter.
+
+## But can I use my Zotero references?
+
+While preparing this workflow I got a few times this question. Luckily, the answer is yes. If you have the Zotero app installed in your computer, you should have already found the Zotero section in the _Insert citation_ menu. Anyway, go check [Zotero citations](https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations) if you need more details. 
+
+## But do I really need to install the Zotero app?
+
+Even if you don't have the Zotero app installed and you only use the web version, you could still sync Positron with your Zotero account, but that might take [a few setup steps](https://quarto.org/docs/tools/positron/visual-editor.html#zotero-web-api).
+
+## Surely there must be a faster way to cite
+
+There is! If you're editing in visual mode, write `@` and you'll automatically get a searchable list of references to choose from:
+
+![My poor list of only one reference (I hope you have more)](imgs/fast_citation.png)
+
+If you write `@knuth84` directly, the output citation style might not be the one you expect. You can also try putting it inside brackets like `[@knuth84]` to see if there's any difference.

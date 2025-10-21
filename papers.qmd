@@ -1,0 +1,27 @@
+# Write reproducible papers
+
+::: {.callout-note}
+This third part has a different tone. You don't need to read the previous ones. And I still need to update many things in those. You can read this independently.
+:::
+
+:::{.right-quote}
+> "It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong."
+>
+> — [Richard Feynman](https://physics.stackexchange.com/questions/697945/understanding-this-quote-by-feynman)
+>
+> (My free translation: "If you can't reproduce it, it didn't happen.")
+:::
+
+You write papers. 
+
+You somehow arrived here.
+
+Why am I writing this?
+
+- I learned about [Quarto](https://quarto.org/) and I love it.
+- You probably run some R code to get results for your paper.
+- You can write both code and text in the same Quarto file. Your whole paper in one place.
+- You can write one file and output various formats, following the style of each journal.
+- Overall, you make papers more reproducible. It's easier for others to reproduce your results.
+
+Give this a chance. Maybe you learn some interesting things along the way.
