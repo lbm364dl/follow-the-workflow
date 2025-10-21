@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>19&nbsp; Automatic checks on Pull Requests – Follow the workflow</title>
+<title>24&nbsp; But you know, papers are collaborative… – Follow the workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./papers.html" rel="next">
-<link href="./read-large-files.html" rel="prev">
+<link href="./trackdown.html" rel="next">
+<link href="./citations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./papers.html">Write reproducible papers</a></li><li class="breadcrumb-item"><a href="./paper-git.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">But you know, papers are collaborative…</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></span></a>
   </div>
 </li>
@@ -305,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./paper-git.html" class="sidebar-item-text sidebar-link">
+  <a href="./paper-git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">But you know, papers are collaborative…</span></span></a>
   </div>
 </li>
@@ -328,15 +328,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-are-you-assuming-everyone-has-the-ability-to-code" id="toc-why-are-you-assuming-everyone-has-the-ability-to-code" class="nav-link active" data-scroll-target="#why-are-you-assuming-everyone-has-the-ability-to-code"><span class="header-section-number">24.1</span> Why are you assuming everyone has the ability to code!?</a></li>
+  <li><a href="#how-do-i-upload-this-thing-to-my-own-github-account" id="toc-how-do-i-upload-this-thing-to-my-own-github-account" class="nav-link" data-scroll-target="#how-do-i-upload-this-thing-to-my-own-github-account"><span class="header-section-number">24.2</span> How do I upload this thing to my own GitHub account?</a>
+  <ul class="collapse">
+  <li><a href="#fork-copy-others-repositories-directly-from-github-start-from-scratch" id="toc-fork-copy-others-repositories-directly-from-github-start-from-scratch" class="nav-link" data-scroll-target="#fork-copy-others-repositories-directly-from-github-start-from-scratch">Fork: copy others’ repositories directly from GitHub, start from scratch</a></li>
+  <li><a href="#push-local-copy-you-already-did-some-work-that-should-be-saved" id="toc-push-local-copy-you-already-did-some-work-that-should-be-saved" class="nav-link" data-scroll-target="#push-local-copy-you-already-did-some-work-that-should-be-saved">Push local copy: you already did some work that should be saved</a></li>
+  </ul></li>
+  <li><a href="#ok-but-how-do-i-actually-use-git" id="toc-ok-but-how-do-i-actually-use-git" class="nav-link" data-scroll-target="#ok-but-how-do-i-actually-use-git"><span class="header-section-number">24.3</span> OK but how do I actually use git?</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/paper-git.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./papers.html">Write reproducible papers</a></li><li class="breadcrumb-item"><a href="./paper-git.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">But you know, papers are collaborative…</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></h1>
+<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">But you know, papers are collaborative…</span></h1>
 </div>
 
 
@@ -353,45 +365,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>By this point we assume you are already done with all your new code, you documented and tested it, or perhaps you just created some report in the form of an article. As we have seen in the <a href="#git-intro">Git intro</a>, it is now time to create a Pull Request so that someone else reviews what you have done. But when you create the Pull Request, our workflow is designed so that two checks are run automatically on GitHub, each time you push your changes to a branch which has an open Pull Request:</p>
+<p>Of course we don’t live under a rock. I’m writing this because I believe writing science should be an extension of writing programming. All researchers are like programmers, they just don’t know it.</p>
+<p>How to collaborate? Use git. Just like with any piece of code, I’m also suggesting to store your paper in a GitHub repository and give access to other collaborators.</p>
+<p>What’s git and GitHub you ask? I devoted the first part of this book to that, but I’m not really satisfied with it and I will rewrite everything at some point.</p>
+<p>Here’s the thing: you don’t need to learn weird git commands and use them in a weird command line if you don’t want to. You can do all the basic things directly from Positron.</p>
+<section id="why-are-you-assuming-everyone-has-the-ability-to-code" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="why-are-you-assuming-everyone-has-the-ability-to-code"><span class="header-section-number">24.1</span> Why are you assuming everyone has the ability to code!?</h2>
+<p>I really believe everyone in the scientific community should learn to code. And I hope <em>you</em> will like this approach and invite your collaborators to do so. <em>But</em>, if you’re the skeptical reader who will tell me that your collaborators aren’t willing to invest time to learn, I give you two options:</p>
 <ul>
-<li>First, the R CMD check is performed. We have seen in a previous section how you can run it locally, so you should have made sure it outputs no errors. Otherwise, you will see this step failing.</li>
-<li>Then, a linting check is performed. We have also seen how to autoformat your code, so that it follows the R code styling standards, and how to make sure that it is indeed well formatted. Otherwise, you will see this step failing.</li>
+<li>Don’t collaborate with them.</li>
+<li>OK, OK, that was harsh. I propose an alternative in the <a href="./trackdown.html">next chapter</a>.</li>
 </ul>
-<p>If any of the steps above fail, you will see something like this in your PR page:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
+</section>
+<section id="how-do-i-upload-this-thing-to-my-own-github-account" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="how-do-i-upload-this-thing-to-my-own-github-account"><span class="header-section-number">24.2</span> How do I upload this thing to my own GitHub account?</h2>
+<p>I will give you two options:</p>
+<section id="fork-copy-others-repositories-directly-from-github-start-from-scratch" class="level3">
+<h3 class="anchored" data-anchor-id="fork-copy-others-repositories-directly-from-github-start-from-scratch">Fork: copy others’ repositories directly from GitHub, start from scratch</h3>
+<p>If you know you want to start from someone’s project but then start adding your own things, you can <em>fork</em> their repository. This will create an exact clone in your own account.</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/github_action_fail.png" class="img-fluid figure-img" alt="GitHub Action check fails"></p>
+<p><img src="imgs/fork_repository.png" class="img-fluid figure-img"></p>
+<figcaption>Shamelessly copying a repository</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<p>Otherwise, if both checks succeeded, you will see something like:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
+<p>Once you have that, you can get a local copy the same way we did at the start using the command “New folder from git”.</p>
+</section>
+<section id="push-local-copy-you-already-did-some-work-that-should-be-saved" class="level3">
+<h3 class="anchored" data-anchor-id="push-local-copy-you-already-did-some-work-that-should-be-saved">Push local copy: you already did some work that should be saved</h3>
+<p>If you followed the previous chapters and created a local folder from the public URL of my repository, you’re here. If you played a bit with the paper and added some things that you want to keep, we should just create a new repository in your account which will include all your local content.</p>
+<ol type="1">
+<li>Your local copy is linking to my own remote repository. Let’s remove that. Search the command “Git: Remove Remote” and get rid of my repository.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/github_action_pass.png" class="img-fluid figure-img" alt="GitHub Action check succeeds"></p>
+<p><img src="imgs/remove_git_remote.png" class="img-fluid figure-img"></p>
+<figcaption>Bye bye test paper</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<p>Overall, you should be able to see this at the bottom of the PR:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
+<ol start="2" type="1">
+<li>Search the command “Publish to GitHub”. You will see some default options, but you can also choose your own name.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/all_pr_ok.png" class="img-fluid figure-img" alt="GitHub Action Pull Request passed"></p>
+<p><img src="imgs/publish_to_github.png" class="img-fluid figure-img"></p>
+<figcaption>Nobody will tell me how to name my repository</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<p>In case you are wondering, both checks we mentioned before are actually done in a single GitHub automatic step (these steps are called ‘GitHub actions’), so it should say ‘1 successful check’ instead of ‘2 successful checks’. However, there is an additional GitHub action there, which essentially just updates the documentation site (only when the PR is actually merged into the main branch). This is not relevant to you as a developer but it makes the overall workflow easier, since the project documentation is automatically updated without any more human intervention. If you want to know more about this automatic site update you can check this <a href="https://r-pkgs.org/website.html">section from the R Packages book</a>.</p>
-<p>Recall that for a PR to be accepted and merged into the main branch, it must also be reviewed by another developer. A good practice would be to make sure the GitHub checks pass before even asking for someone’s reviewing, because if any check failed you most likely need to add more code changes to fix them, so some of the code the reviewer could have checked before could become obsolete, and they would have to read it again, so we better avoid that.</p>
+<ol start="3" type="1">
+<li>Done! Check your GitHub account. You should find a new repository with the local content.</li>
+</ol>
+</section>
+</section>
+<section id="ok-but-how-do-i-actually-use-git" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="ok-but-how-do-i-actually-use-git"><span class="header-section-number">24.3</span> OK but how do I actually use git?</h2>
+<p>As I said, you can read the boring first part of this book and maybe figure out how to do those things directly from Positron. Or you can search other guides and learn by yourself. You can start from Positron’s <a href="https://positron.posit.co/git.html">Git Version Control guide</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -795,13 +826,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./read-large-files.html" class="pagination-link" aria-label="Reading large files">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Reading large files</span></span>
+      <a href="./citations.html" class="pagination-link" aria-label="But how do I cite my people?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">But how do I cite my people?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./papers.html" class="pagination-link" aria-label="Write reproducible papers">
-        <span class="nav-page-text">Write reproducible papers</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./trackdown.html" class="pagination-link" aria-label="But there's this collaborator who can't code...">
+        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">But there’s this collaborator who can’t code…</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -813,7 +844,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/pr-auto-checks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/paper-git.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -259,5 +259,323 @@
       "Create an R package",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Automatic checks on Pull Requests</span>"
     ]
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Write reproducible papers",
+    "section": "",
+    "text": "Note\n\n\n\nThis third part has a different tone. You don’t need to read the previous ones. And I still need to update many things in those. You can read this independently.\n\n\n\n\n“It doesn’t matter how beautiful your theory is, it doesn’t matter how smart you are. If it doesn’t agree with experiment, it’s wrong.”\n— Richard Feynman\n(My free translation: “If you can’t reproduce it, it didn’t happen.”)\n\n\nYou write papers.\nYou somehow arrived here.\nWhy am I writing this?\n\nI learned about Quarto and I love it.\nYou probably run some R code to get results for your paper.\nYou can write both code and text in the same Quarto file. Your whole paper in one place.\nYou can write one file and output various formats, following the style of each journal.\nOverall, you make papers more reproducible. It’s easier for others to reproduce your results.\n\nGive this a chance. Maybe you learn some interesting things along the way.",
+    "crumbs": [
+      "Write reproducible papers"
+    ]
+  },
+  {
+    "objectID": "positron.html",
+    "href": "positron.html",
+    "title": "20  Bye RStudio, welcome Positron",
+    "section": "",
+    "text": "20.1 Elevator pitch\nTo be fair, I would’ve preferred this title to be Bye RStudio, welcome Neovim. Yes, my editor is directly inside a command line. Yes, I know it’s not the first thing you think about for beginners. For this reason, you’re going to join me in this journey where we learn together how to use Positron.\nPositron is a code editor made by the same people who developed RStudio. They’re trying to build a more general code editor for data science, similar to Visual Studio Code, if you even know about that one. Why move away from RStudio you say? I don’t know! I’m going to trust these folks, and you should give them a chance too. If you’re completely against the idea and want to keep using RStudio, you’ll have to fill some gaps by yourself in this guide.\nWe need to start, of course, by installing this Positron thing.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bye RStudio, welcome Positron</span>"
+    ]
+  },
+  {
+    "objectID": "positron.html#elevator-pitch",
+    "href": "positron.html#elevator-pitch",
+    "title": "20  Bye RStudio, welcome Positron",
+    "section": "",
+    "text": "Tip\n\n\n\nIf you’re a Windows enjoyer user and you have one of those work computers that don’t let you install anything without asking for an admin password that takes 17 weeks to get, choose user level install. User level installations don’t require an admin password. Let’s thank every developer that invests their precious time in making their app installable without admin rights.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bye RStudio, welcome Positron</span>"
+    ]
+  },
+  {
+    "objectID": "positron.html#youre-the-commander",
+    "href": "positron.html#youre-the-commander",
+    "title": "20  Bye RStudio, welcome Positron",
+    "section": "20.2 You’re the commander",
+    "text": "20.2 You’re the commander\nYou’ll somehow learn how to use this code editor. No big deal. For now I just want to show you one thing. You press the keys ctrl shift p to get a small menu with “commands”. You can run many different things from here. I think it’s the easiest way to do it. We might use that a few times in the guide. It’s also helpful for me because that way I won’t have headaches trying to find out where that specific command appears in the interface. Just write the description of the command and it will appear. Here, an example:\n\n\n\nSearching Positron commands",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bye RStudio, welcome Positron</span>"
+    ]
+  },
+  {
+    "objectID": "quarto.html",
+    "href": "quarto.html",
+    "title": "21  Embrace Quarto",
+    "section": "",
+    "text": "21.1 The writer’s soliloquy rant\nEnough talking about the editor. We want to write papers. How? Quarto. Yes, I could write some boring introduction about Quarto here. Just go and take a look at their site’s home page. When you’re satisfied come back. If you’re not satisfied, please also come back. Let’s at least run one example before you decide to go back to Microsoft Word.\nIf you’ve tried to submit some papers in journals, you might have heard about this thing called LaTeX even if you never used it. It’s one format they typically accept. It’s a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.\nBeautiful PDFs come from ugly LaTeX files. Yes, I mean, there’s a lot of unnecessary jargon in a LaTeX file that you probably don’t care about. I won’t try to defend LaTeX. You just want to write your document, don’t you? Well, it’s time for Quarto. Luckily for you, the Positron devs already included Quarto in your Positron editor so if we intend to use that, you don’t need to install anything else!",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "quarto.html#give-me-that-paper-already",
+    "href": "quarto.html#give-me-that-paper-already",
+    "title": "21  Embrace Quarto",
+    "section": "21.2 Give me that paper already",
+    "text": "21.2 Give me that paper already\nCome on, search for the command new folder from git, just as I told you in previous section. You can copy URLs of GitHub repositories directly. I created an example for you. It’s at https://github.com/lbm364dl/test-paper. You can pay a visit if you’re interested or just copy and paste the URL:\n\n\n\nGetting an example from my GitHub\n\n\nAnd we get our example Quarto project! Open the index.qmd file:\n\n\n\nOpened Quarto file index.qmd",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "quarto.html#lets-preview-that",
+    "href": "quarto.html#lets-preview-that",
+    "title": "21  Embrace Quarto",
+    "section": "21.3 Let’s preview that…",
+    "text": "21.3 Let’s preview that…\nSee that Preview button up there? I wonder what it does… let’s just hit that Subscribe Preview button and find out!\n\n\n\nWe failed miserably\n\n\nA bunch of things show up there. The important ones:\n\nUseful messages saying we didn’t install packages such as knitr and rmarkdown. You might know how to solve that, but wait.\nSomething saying “Use renv::restore() to restore the project library”.\n\nWhat is this renv::restore() thing? Just a simple command that will install all R packages required to run some code in the project. So you don’t need to install each package by hand, just run this command in the console:\n\n\n\nRestore those packages!\n\n\nIf you want to know more about renv, go visit the Virtual environments with renv chapter or read any better guide, even the official renv docs. If for some reason you’re an renv hater, just remove source(\"renv/activate.R\") from the .Rprofile file and then you can also get rid of the renv folder and the renv.lock file. But if you’re really an renv hater, you probably already knew that.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "quarto.html#tiny-tiny-paper",
+    "href": "quarto.html#tiny-tiny-paper",
+    "title": "21  Embrace Quarto",
+    "section": "21.4 …tiny tiny paper",
+    "text": "21.4 …tiny tiny paper\nOK, OK, we installed some packages, we should get no errors now. Just hit again that Preview button. Hopefully you see this:\n\n\n\nHey, that output is too small, I can’t see anything\n\n\nYou know I believe in you. You got some new things on the right. By this point you and your Positron should be like a kid with their new toy. Just experiment. I’m sure you’ll be able to make that output window bigger.\nAnd that’s it. You produced your PDF paper! Under the hood, your Quarto file index.qmd is being converted to a LaTeX file, and the PDF output is created from that LaTeX file. The magic is you don’t need to write ugly LaTeX. Quarto does that for you. It also knows how to convert your file to dozens of other formats.\nEmbrace Quarto.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "quarto-syntax.html",
+    "href": "quarto-syntax.html",
+    "title": "22  But how do I write in Quarto syntax?",
+    "section": "",
+    "text": "22.1 Well, maybe you don’t need to\nRemember, you have to experiment! You learn better by doing. In most cases, if the syntax is not appealing, you don’t even need to know it! The Positron team has also thought about this. All Quarto files give you the option of using Visual mode:\nAgain, you see visual mode enables a bunch of new buttons. Click’em all!\nAt some point maybe you’ll become familiar with most of the options and their translation to the actual raw syntax, and then you might feel you write faster directly in Source mode. Or not. You decide.\nMost “Quarto syntax” is nothing new. It’s based on something called Markdown. Anyway, if you’re interested in knowing more, go read something like Quarto’s Markdown basics.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
+    ]
+  },
+  {
+    "objectID": "quarto-syntax.html#well-maybe-you-dont-need-to",
+    "href": "quarto-syntax.html#well-maybe-you-dont-need-to",
+    "title": "22  But how do I write in Quarto syntax?",
+    "section": "",
+    "text": "Visual intuition, click things and see how they look",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
+    ]
+  },
+  {
+    "objectID": "quarto-syntax.html#what-are-these-weird-symbols-for-the-math-formulas",
+    "href": "quarto-syntax.html#what-are-these-weird-symbols-for-the-math-formulas",
+    "title": "22  But how do I write in Quarto syntax?",
+    "section": "22.2 What are these weird symbols for the math formulas?",
+    "text": "22.2 What are these weird symbols for the math formulas?\nI told you to click all things, so I hope this is not new for you. When you try to unravel that math formula I included as an example, you see this:\n\n\n\nPeeping inside the Matrix of math formulas\n\n\nWhat’s going on there?\nRemember we talked about this format called LaTeX that you didn’t need to know about? If your paper doesn’t require writing math formulas, you’re safe. Otherwise…\nWelcome to LaTeX math formulas. Yes, we’re in Quarto, but we still use LaTeX syntax for math formulas. So you’ll need to learn how to do that. No, I won’t teach a LaTeX course here. Ask your favorite AI or something.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
+    ]
+  },
+  {
+    "objectID": "quarto-syntax.html#quarto-runs-my-code",
+    "href": "quarto-syntax.html#quarto-runs-my-code",
+    "title": "22  But how do I write in Quarto syntax?",
+    "section": "22.3 Quarto runs my code?!",
+    "text": "22.3 Quarto runs my code?!\nYes! That’s one of the best features. You can include code blocks in Quarto files, and they will be run and their output included in the final document. You can also choose if you want to include only code, only output, or both.\n\n\n\nSome R code in the wild\n\n\nRemember when we had some errors about missing R packages the first time we tried to preview? Well, in theory Quarto works without R. But I included some R code chunks in our document, so it needed those package installations to be able to run the code.\nIn the above example, this {r} thing indicates that this is R code. By default, Quarto runs code but only shows its output. The special comment #| echo: true tells Quarto that we also want to show the actual code in the final document, not only its output.\nIf you want to learn more about running code inside Quarto, you can probably start here.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
+    ]
+  },
+  {
+    "objectID": "quarto-syntax.html#more-more-more",
+    "href": "quarto-syntax.html#more-more-more",
+    "title": "22  But how do I write in Quarto syntax?",
+    "section": "22.4 More, more, more",
+    "text": "22.4 More, more, more\nYes, there’s more for you. But not here. Go and read Quarto’s docs, they have a bunch of things. Particularly, you might want to check:\n\nPositron Basics: how to boost your experience with Quarto inside Positron.\nVisual editor: learn about more things you can do visually without having to learn too much syntax.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
+    ]
+  },
+  {
+    "objectID": "citations.html",
+    "href": "citations.html",
+    "title": "23  But how do I cite my people?",
+    "section": "",
+    "text": "23.1 But can I use my Zotero references?\nYou know clickbait is effective…\nIf you already read the previous chapter, I hope you already found about the Insert citation button in visual mode. There you go. Next chapter.\nWhile preparing this workflow I got a few times this question. Luckily, the answer is yes. If you have the Zotero app installed in your computer, you should have already found the Zotero section in the Insert citation menu. Anyway, go check Zotero citations if you need more details.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>But how do I cite my people?</span>"
+    ]
+  },
+  {
+    "objectID": "citations.html#but-do-i-really-need-to-install-the-zotero-app",
+    "href": "citations.html#but-do-i-really-need-to-install-the-zotero-app",
+    "title": "23  But how do I cite my people?",
+    "section": "23.2 But do I really need to install the Zotero app?",
+    "text": "23.2 But do I really need to install the Zotero app?\nEven if you don’t have the Zotero app installed and you only use the web version, you could still sync Positron with your Zotero account, but that might take a few setup steps.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>But how do I cite my people?</span>"
+    ]
+  },
+  {
+    "objectID": "citations.html#surely-there-must-be-a-faster-way-to-cite",
+    "href": "citations.html#surely-there-must-be-a-faster-way-to-cite",
+    "title": "23  But how do I cite my people?",
+    "section": "23.3 Surely there must be a faster way to cite",
+    "text": "23.3 Surely there must be a faster way to cite\nThere is! If you’re editing in visual mode, write @ and you’ll automatically get a searchable list of references to choose from:\n\n\n\nMy poor list of only one reference (I hope you have more)\n\n\nIf you write @knuth84 directly, the output citation style might not be the one you expect. You can also try putting it inside brackets like [@knuth84] to see if there’s any difference.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>But how do I cite my people?</span>"
+    ]
+  },
+  {
+    "objectID": "paper-git.html",
+    "href": "paper-git.html",
+    "title": "24  But you know, papers are collaborative…",
+    "section": "",
+    "text": "24.1 Why are you assuming everyone has the ability to code!?\nOf course we don’t live under a rock. I’m writing this because I believe writing science should be an extension of writing programming. All researchers are like programmers, they just don’t know it.\nHow to collaborate? Use git. Just like with any piece of code, I’m also suggesting to store your paper in a GitHub repository and give access to other collaborators.\nWhat’s git and GitHub you ask? I devoted the first part of this book to that, but I’m not really satisfied with it and I will rewrite everything at some point.\nHere’s the thing: you don’t need to learn weird git commands and use them in a weird command line if you don’t want to. You can do all the basic things directly from Positron.\nI really believe everyone in the scientific community should learn to code. And I hope you will like this approach and invite your collaborators to do so. But, if you’re the skeptical reader who will tell me that your collaborators aren’t willing to invest time to learn, I give you two options:",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
+    ]
+  },
+  {
+    "objectID": "paper-git.html#why-are-you-assuming-everyone-has-the-ability-to-code",
+    "href": "paper-git.html#why-are-you-assuming-everyone-has-the-ability-to-code",
+    "title": "24  But you know, papers are collaborative…",
+    "section": "",
+    "text": "Don’t collaborate with them.\nOK, OK, that was harsh. I propose an alternative in the next chapter.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
+    ]
+  },
+  {
+    "objectID": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github-account",
+    "href": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github-account",
+    "title": "24  But you know, papers are collaborative…",
+    "section": "24.2 How do I upload this thing to my own GitHub account?",
+    "text": "24.2 How do I upload this thing to my own GitHub account?\nI will give you two options:\n\nFork: copy others’ repositories directly from GitHub, start from scratch\nIf you know you want to start from someone’s project but then start adding your own things, you can fork their repository. This will create an exact clone in your own account.\n\n\n\nShamelessly copying a repository\n\n\nOnce you have that, you can get a local copy the same way we did at the start using the command “New folder from git”.\n\n\nPush local copy: you already did some work that should be saved\nIf you followed the previous chapters and created a local folder from the public URL of my repository, you’re here. If you played a bit with the paper and added some things that you want to keep, we should just create a new repository in your account which will include all your local content.\n\nYour local copy is linking to my own remote repository. Let’s remove that. Search the command “Git: Remove Remote” and get rid of my repository.\n\n\n\n\nBye bye test paper\n\n\n\nSearch the command “Publish to GitHub”. You will see some default options, but you can also choose your own name.\n\n\n\n\nNobody will tell me how to name my repository\n\n\n\nDone! Check your GitHub account. You should find a new repository with the local content.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
+    ]
+  },
+  {
+    "objectID": "paper-git.html#ok-but-how-do-i-actually-use-git",
+    "href": "paper-git.html#ok-but-how-do-i-actually-use-git",
+    "title": "24  But you know, papers are collaborative…",
+    "section": "24.3 OK but how do I actually use git?",
+    "text": "24.3 OK but how do I actually use git?\nAs I said, you can read the boring first part of this book and maybe figure out how to do those things directly from Positron. Or you can search other guides and learn by yourself. You can start from Positron’s Git Version Control guide.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html",
+    "href": "trackdown.html",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "",
+    "text": "25.1 Just send them a Google Docs link\nYes, you’re right… That’s most likely going to happen!\nWhat if we create a version of the paper in a parallel universe where your collaborator won’t have any excuses?\nOK, at least you are the programmer and by now you know how to use Quarto and git. You will also be responsible for having the paper up to date in the GitHub repository.\nBut your collaborators don’t need to know about that.\nThe workflow would look like this:",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html#just-send-them-a-google-docs-link",
+    "href": "trackdown.html#just-send-them-a-google-docs-link",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "",
+    "text": "What is this weird Google Docs file?\n\n\n\n\nYou write something. You put that in Google Docs. You send it to collaborators for feedback.\nThey add suggestions and comments. You accept them.\nYou take all those changes back to the Quarto and git version.\nYou write more things. Repeat.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html#sync",
+    "href": "trackdown.html#sync",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "25.2 How to sync the Google Docs file? Manually?? You kidding???",
+    "text": "25.2 How to sync the Google Docs file? Manually?? You kidding???\nNo, no, no, no, no.\nWe use trackdown. This is an R package that will let us easily sync the Quarto and git version with a Google Docs one. The package currently seems unmaintained, but it does its job, so we’re going to use it anyway.\nThe previous steps, now including trackdown, would look like this:\n\nYou write something blah blah blah. You use trackdown::upload_file(\"path/to/file.qmd\") (if first time upload) or trackdown::update_file(\"path/to/file.qmd\") (if Google Docs file already existed). You ask for feedback.\nYou’re done with feedback.\nYou get everything back with trackdown::download_file(\"path/to/file.qmd\").\nRepeat.\n\nActually, there’s absolutely no need for you to stop writing until the collaborators are done with their feedback. You should be using git, remember? If you always commit your changes, you have nothing to fear. Even if you screw up, you can undo.\nYes, your local universe and the Google Docs universe might have diverged and you might have to reconcile them, but deal with it. Solving conflicts is the daily life of the programmer. We’ll get back to this in the last section.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html#the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown",
+    "href": "trackdown.html#the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "25.3 The fortunately onetime but hilariously long instructions to configure trackdown",
+    "text": "25.3 The fortunately onetime but hilariously long instructions to configure trackdown\nIf you tried the above trackdown commands, you might have failed miserably. We still need to configure trackdown to be able to access your Google account and do some things on your behalf.\nIf you don’t trust what this thing might do, I think the best option isn’t quitting this guide and going back to Microsoft Word, but rather creating a new Google account only for this, so you don’t compromise anything else. You decide.\nAlright, once you have your desired Google account, get ready for the depressing fun instructions. Please, bear with me, you’ll only have to do this once:\n\nOpen your Google Cloud Platform project, signed in with your Google account. You might be asked to add another authentication step to your account. Just do that and then keep going.\nOpen this link to create an app (whatever that means). Fill things:\n\nApp Information:\n\nApp name: whatever, e.g., Trackdown\nUser support email: your own email\n\nAudience: external\nContact Information: your own email\nFinish: agree\nFinally, create\n\nOpen this link to add yourself as test user (whatever that means).\n\nIn Test users, click Add users\nAdd your own email\nClick Save (twice if necessary)\n\nOpen this link and click Enable to allow programmatic access to Google Drive.\nOpen this link and click Enable to allow programmatic access to Google Docs.\nOpen this link to create an OAuth client ID (whatever that means). Fill things:\n\nApplication type: Desktop app\nName: whatever, e.g. Trackdown\nClick create\nClick Download JSON. The name of the downloaded file should be something like client_secret_some_long_code.apps.googleusercontent.com.json.\n\nActually use these credentials:\n\nPut that JSON file in the main folder of the project (the same folder where the README.md file is).\nRename it as trackdown_access.json. The .json is the extension, and you might not need to write it if you use e.g. Windows file explorer. If something goes wrong, make sure you didn’t name it trackdown_access.json.json by mistake.\n\nRestart your R session. Your credentials are read automatically from .Rprofile every time you open an R session here. If you already had an open session while setting the credentials file, it won’t be read until you restart the session.\nActually use trackdown! Check the previous section for the important functions. When using trackdown update/download functions, the first time you will be asked to grant access in your browser. Toggle the allow read/write access button before continuing. Otherwise it won’t work.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html#workflow",
+    "href": "trackdown.html#workflow",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "25.4 I’m not really sure how to integrate both places…",
+    "text": "25.4 I’m not really sure how to integrate both places…\nRight, I gave you the tools but maybe the process is still a bit confusing.\nI tried to design a workflow myself. I hope it makes things clearer. You’ll need to know how to work with branches in git. Again, you can read about that in my boring guide or use something else, like the Positron/VS Code guide.\n\nThe main branch must contain the most up to date reviewed version of the paper.\nThe sync-google-doc branch will be up to date with the Google Docs version of your paper.\nWhen a certain review stage finishes, you download the content into sync-google-doc with trackdown and create a Pull Request from sync-google-doc to main.\nYou will see a preview of the PDF result in the Pull Request after a while.\nIf you’re satisfied with the result, you merge into main.\nIf you want to add new content yourself directly in the repository, you create your own branch. When you’re done, you merge to main. If you’re that lazy and you’re the only one actively using the repository, you can even push to main directly, but I highly recommend using other branches for better organization.\nIf there are local changes not in the Google doc, you do git pull origin main from the sync-google-doc branch to update it (or command Git: Pull from… in Positron). You then update the Google doc using trackdown. Please have a clean Google doc state before (no pending comments/suggestions), otherwise you may lose changes when overwriting.\nAsk for a new review. Go back to step 3.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "trackdown.html#my-collaborator-doesnt-understand-this-weird-google-docs-file",
+    "href": "trackdown.html#my-collaborator-doesnt-understand-this-weird-google-docs-file",
+    "title": "25  But there’s this collaborator who can’t code…",
+    "section": "25.5 My collaborator doesn’t understand this weird Google Docs file",
+    "text": "25.5 My collaborator doesn’t understand this weird Google Docs file\nIt is what it is…\nThe main idea behind this is that they mostly want to review plain text. If you try using trackdown, you will see that it shows raw Markdown in the file, no images, no plots, no formatting…\nYou should also send them a PDF of that paper version so they can see everything neatly rendered in case they want to provide extra feedback not directly related to text. But they won’t be able to modify that directly. We assume they only want to suggest text changes themselves. For the rest, they either learn how to use the repository or you yourself should do those changes.\nAlso, just remind them not to change orange text. You don’t want them to break your code, don’t you? It already says that at the start, but yeah, people don’t read those things…",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>But there's this collaborator who can't code...</span>"
+    ]
+  },
+  {
+    "objectID": "templates.html",
+    "href": "templates.html",
+    "title": "26  But how to follow the journal’s style?",
+    "section": "",
+    "text": "26.1 Some people already created custom templates for you\nDid you find the example paper familiar? It follows Elsevier format.\nHow? Come on, take a quick look at the subfolder _extensions/quarto-journals/elsevier. Why is this working?\nBut really, how do we set this custom format? It’s really the template partials. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX. In this example, you see before-body.tex and title.tex being used (in the elsevier/partials subfolder). These are the parts of our document where we decide to apply some custom behaviour.\nBefore you decide this is too hard for you, check next section.\nThere are a few ready to use templates for some well-known journals. You can find them in this list.\nThe one I used as an example is from there. You could have also installed it by writing in a terminal quarto use template quarto-journals/elsevier or any of the other names. If necessary, also remember to write the correct format name in _quarto.yml, e.g., if you instead use quarto-journals/jasa, you should write jasa-pdf as format.\nJust play a bit with the options. I believe in you.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
+    ]
+  },
+  {
+    "objectID": "templates.html#theres-no-template-for-my-journal",
+    "href": "templates.html#theres-no-template-for-my-journal",
+    "title": "26  But how to follow the journal’s style?",
+    "section": "26.2 There’s no template for my journal",
+    "text": "26.2 There’s no template for my journal\nThen it’s your time to shine… You’ll have to create one yourself! OK, maybe you’ll struggle a bit, but I’m sure you can do it. And then you can share it and also help others!\nI won’t go into detail here. You should try to do it by yourself. Things to have in mind:\n\nQuarto already wrote a nice introduction for creating custom journal formats.\nThey also provide an example repository which you can start from (also mentioned in the previous link).\nMost journals should provide some LaTeX template on their site. You most likely don’t need the whole thing, it’s probably a mess. I would just take the most important parts and get something working as fast as possible. Later on you can worry about the details. Or just ignore them. If the output looks like other papers in that journal, you’re good to go. You might also ask your favourite AI for help.\nOnce it’s included in a public repository, you can use it the same way as the others. Just run quarto use template your-github/your-repo.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
+    ]
+  },
+  {
+    "objectID": "templates.html#its-not-only-papers",
+    "href": "templates.html#its-not-only-papers",
+    "title": "26  But how to follow the journal’s style?",
+    "section": "26.3 It’s not only papers…",
+    "text": "26.3 It’s not only papers…\nYou can also use Quarto to write many other things. Here I focused on papers, but you might also write your PhD thesis! I created myself a custom template for UPM thesis.\nTake a quick look. You can see that the project type in _quarto.yml is book. I don’t really know what important differences this has compared to manuscript. It’s probably almost the same, but this makes it easier to write each chapter or section in a separate Quarto file, to keep everything more organized. I myself took inspiration from this template.\nAgain, you can take these as a starting point and build your own template. Please share it if you do!",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
+    ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>19&nbsp; Automatic checks on Pull Requests – Follow the workflow</title>
+<title>25&nbsp; But there’s this collaborator who can’t code… – Follow the workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./papers.html" rel="next">
-<link href="./read-large-files.html" rel="prev">
+<link href="./templates.html" rel="next">
+<link href="./paper-git.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./papers.html">Write reproducible papers</a></li><li class="breadcrumb-item"><a href="./trackdown.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">But there’s this collaborator who can’t code…</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></span></a>
   </div>
 </li>
@@ -311,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./trackdown.html" class="sidebar-item-text sidebar-link">
+  <a href="./trackdown.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">But there’s this collaborator who can’t code…</span></span></a>
   </div>
 </li>
@@ -328,15 +328,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#just-send-them-a-google-docs-link" id="toc-just-send-them-a-google-docs-link" class="nav-link active" data-scroll-target="#just-send-them-a-google-docs-link"><span class="header-section-number">25.1</span> Just send them a Google Docs link</a></li>
+  <li><a href="#sync" id="toc-sync" class="nav-link" data-scroll-target="#sync"><span class="header-section-number">25.2</span> How to sync the Google Docs file? Manually?? You kidding???</a></li>
+  <li><a href="#the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown" id="toc-the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown" class="nav-link" data-scroll-target="#the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown"><span class="header-section-number">25.3</span> The fortunately onetime but hilariously long instructions to configure trackdown</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow"><span class="header-section-number">25.4</span> I’m not really sure how to integrate both places…</a></li>
+  <li><a href="#my-collaborator-doesnt-understand-this-weird-google-docs-file" id="toc-my-collaborator-doesnt-understand-this-weird-google-docs-file" class="nav-link" data-scroll-target="#my-collaborator-doesnt-understand-this-weird-google-docs-file"><span class="header-section-number">25.5</span> My collaborator doesn’t understand this weird Google Docs file</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/trackdown.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./papers.html">Write reproducible papers</a></li><li class="breadcrumb-item"><a href="./trackdown.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">But there’s this collaborator who can’t code…</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></h1>
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">But there’s this collaborator who can’t code…</span></h1>
 </div>
 
 
@@ -353,45 +363,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>By this point we assume you are already done with all your new code, you documented and tested it, or perhaps you just created some report in the form of an article. As we have seen in the <a href="#git-intro">Git intro</a>, it is now time to create a Pull Request so that someone else reviews what you have done. But when you create the Pull Request, our workflow is designed so that two checks are run automatically on GitHub, each time you push your changes to a branch which has an open Pull Request:</p>
+<p>Yes, you’re right… That’s most likely going to happen!</p>
+<p>What if we create a version of the paper in a <em>parallel universe</em> where your collaborator won’t have any excuses?</p>
+<section id="just-send-them-a-google-docs-link" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="just-send-them-a-google-docs-link"><span class="header-section-number">25.1</span> Just send them a Google Docs link</h2>
+<p>OK, at least <em>you</em> are the programmer and by now you know how to use Quarto and git. <em>You</em> will also be responsible for having the paper up to date in the GitHub repository.</p>
+<p>But your collaborators don’t need to know about that.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/google_doc_version.png" class="img-fluid figure-img"></p>
+<figcaption>What is this weird Google Docs file?</figcaption>
+</figure>
+</div>
+<p>The workflow would look like this:</p>
+<ol type="1">
+<li>You write something. You put that in Google Docs. You send it to collaborators for feedback.</li>
+<li>They add suggestions and comments. You accept them.</li>
+<li>You take all those changes back to the Quarto and git version.</li>
+<li>You write more things. Repeat.</li>
+</ol>
+</section>
+<section id="sync" class="level2" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="sync"><span class="header-section-number">25.2</span> How to sync the Google Docs file? Manually?? You kidding???</h2>
+<p><em>No, no, no, no, no</em>.</p>
+<p>We use <a href="https://claudiozandonella.github.io/trackdown/">trackdown</a>. This is an R package that will let us easily sync the Quarto and git version with a Google Docs one. The package currently seems unmaintained, but it does its job, so we’re going to use it anyway.</p>
+<p>The previous steps, now including trackdown, would look like this:</p>
+<ol type="1">
+<li>You write something blah blah blah. You use <code>trackdown::upload_file("path/to/file.qmd")</code> (if first time upload) or <code>trackdown::update_file("path/to/file.qmd")</code> (if Google Docs file already existed). You ask for feedback.</li>
+<li>You’re done with feedback.</li>
+<li>You get everything back with <code>trackdown::download_file("path/to/file.qmd")</code>.</li>
+<li>Repeat.</li>
+</ol>
+<p>Actually, there’s absolutely no need for you to stop writing until the collaborators are done with their feedback. You should be using git, remember? If you always commit your changes, you have nothing to fear. Even if you screw up, you can undo.</p>
+<p>Yes, your local universe and the Google Docs universe might have diverged and you might have to reconcile them, but deal with it. Solving conflicts is the daily life of the programmer. We’ll get back to this in <a href="#workflow">the last section</a>.</p>
+</section>
+<section id="the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="the-fortunately-onetime-but-hilariously-long-instructions-to-configure-trackdown"><span class="header-section-number">25.3</span> The fortunately onetime but hilariously long instructions to configure trackdown</h2>
+<p>If you tried the above trackdown commands, you might have failed miserably. We still need to configure trackdown to be able to access your Google account and do some things on your behalf.</p>
+<p>If you don’t trust what this thing might do, I think the best option isn’t quitting this guide and going back to Microsoft Word, but rather creating a new Google account only for this, so you don’t compromise anything else. You decide.</p>
+<p>Alright, once you have your desired Google account, get ready for the <del>depressing</del> fun instructions. Please, bear with me, you’ll only have to do this once:</p>
+<ol type="1">
+<li>Open <a href="https://console.cloud.google.com/">your Google Cloud Platform project</a>, signed in with your Google account. You might be asked to add another authentication step to your account. Just do that and then keep going.</li>
+<li>Open <a href="https://console.cloud.google.com/auth/overview/create">this link</a> to create an <em>app</em> (whatever that means). Fill things:
 <ul>
-<li>First, the R CMD check is performed. We have seen in a previous section how you can run it locally, so you should have made sure it outputs no errors. Otherwise, you will see this step failing.</li>
-<li>Then, a linting check is performed. We have also seen how to autoformat your code, so that it follows the R code styling standards, and how to make sure that it is indeed well formatted. Otherwise, you will see this step failing.</li>
-</ul>
-<p>If any of the steps above fail, you will see something like this in your PR page:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/github_action_fail.png" class="img-fluid figure-img" alt="GitHub Action check fails"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Otherwise, if both checks succeeded, you will see something like:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/github_action_pass.png" class="img-fluid figure-img" alt="GitHub Action check succeeds"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Overall, you should be able to see this at the bottom of the PR:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/all_pr_ok.png" class="img-fluid figure-img" alt="GitHub Action Pull Request passed"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In case you are wondering, both checks we mentioned before are actually done in a single GitHub automatic step (these steps are called ‘GitHub actions’), so it should say ‘1 successful check’ instead of ‘2 successful checks’. However, there is an additional GitHub action there, which essentially just updates the documentation site (only when the PR is actually merged into the main branch). This is not relevant to you as a developer but it makes the overall workflow easier, since the project documentation is automatically updated without any more human intervention. If you want to know more about this automatic site update you can check this <a href="https://r-pkgs.org/website.html">section from the R Packages book</a>.</p>
-<p>Recall that for a PR to be accepted and merged into the main branch, it must also be reviewed by another developer. A good practice would be to make sure the GitHub checks pass before even asking for someone’s reviewing, because if any check failed you most likely need to add more code changes to fix them, so some of the code the reviewer could have checked before could become obsolete, and they would have to read it again, so we better avoid that.</p>
+<li>App Information:
+<ul>
+<li>App name: whatever, e.g., Trackdown</li>
+<li>User support email: your own email</li>
+</ul></li>
+<li>Audience: external</li>
+<li>Contact Information: your own email</li>
+<li>Finish: agree</li>
+<li>Finally, create</li>
+</ul></li>
+<li>Open <a href="https://console.cloud.google.com/auth/audience">this link</a> to add yourself as test user (whatever that means).
+<ul>
+<li>In <em>Test users</em>, click <em>Add users</em></li>
+<li>Add your own email</li>
+<li>Click <em>Save</em> (twice if necessary)</li>
+</ul></li>
+<li>Open <a href="https://console.cloud.google.com/apis/library/drive.googleapis.com">this link</a> and click <em>Enable</em> to allow programmatic access to Google Drive.</li>
+<li>Open <a href="https://console.cloud.google.com/apis/library/docs.googleapis.com">this link</a> and click <em>Enable</em> to allow programmatic access to Google Docs.</li>
+<li>Open <a href="https://console.cloud.google.com/auth/clients/create">this link</a> to create an OAuth client ID (whatever that means). Fill things:
+<ul>
+<li>Application type: Desktop app</li>
+<li>Name: whatever, e.g.&nbsp;Trackdown</li>
+<li>Click create</li>
+<li>Click <em>Download JSON</em>. The name of the downloaded file should be something like <code>client_secret_some_long_code.apps.googleusercontent.com.json</code>.</li>
+</ul></li>
+<li>Actually use these credentials:
+<ul>
+<li>Put that JSON file in the main folder of the project (the same folder where the <code>README.md</code> file is).</li>
+<li>Rename it as <code>trackdown_access.json</code>. The <code>.json</code> is the extension, and you might not need to write it if you use e.g.&nbsp;Windows file explorer. If something goes wrong, make sure you didn’t name it <code>trackdown_access.json.json</code> by mistake.</li>
+</ul></li>
+<li>Restart your R session. Your credentials are read automatically from <code>.Rprofile</code> every time you open an R session here. If you already had an open session while setting the credentials file, it won’t be read until you restart the session.</li>
+<li>Actually use trackdown! Check the <a href="#sync">previous section</a> for the important functions. When using trackdown update/download functions, the first time you will be asked to grant access in your browser. <strong>Toggle the <em>allow read/write access</em> button before continuing</strong>. Otherwise it won’t work.</li>
+</ol>
+</section>
+<section id="workflow" class="level2" data-number="25.4">
+<h2 data-number="25.4" class="anchored" data-anchor-id="workflow"><span class="header-section-number">25.4</span> I’m not really sure how to integrate both places…</h2>
+<p>Right, I gave you the tools but maybe the process is still a bit confusing.</p>
+<p>I tried to design a workflow myself. I hope it makes things clearer. You’ll need to know how to work with branches in git. Again, you can read about that in my boring guide or use something else, like <a href="https://positron.posit.co/git.html#working-with-branches">the Positron/VS Code guide</a>.</p>
+<ol type="1">
+<li>The <code>main</code> branch must contain the most up to date reviewed version of the paper.</li>
+<li>The <code>sync-google-doc</code> branch will be up to date with the Google Docs version of your paper.</li>
+<li>When a certain review stage finishes, you download the content into <code>sync-google-doc</code> with trackdown and create a Pull Request from <code>sync-google-doc</code> to <code>main</code>.</li>
+<li>You will see a preview of the PDF result in the Pull Request after a while.</li>
+<li>If you’re satisfied with the result, you merge into <code>main</code>.</li>
+<li>If you want to add new content yourself directly in the repository, you create your own branch. When you’re done, you merge to <code>main</code>. If you’re that lazy and you’re the only one actively using the repository, you can even push to main directly, but I highly recommend using other branches for better organization.</li>
+<li>If there are local changes not in the Google doc, you do <code>git pull origin main</code> from the <code>sync-google-doc</code> branch to update it (or command <em>Git: Pull from…</em> in Positron). You then update the Google doc using trackdown. <strong>Please have a clean Google doc state before (no pending comments/suggestions), otherwise you may lose changes when overwriting.</strong></li>
+<li>Ask for a new review. Go back to step 3.</li>
+</ol>
+</section>
+<section id="my-collaborator-doesnt-understand-this-weird-google-docs-file" class="level2" data-number="25.5">
+<h2 data-number="25.5" class="anchored" data-anchor-id="my-collaborator-doesnt-understand-this-weird-google-docs-file"><span class="header-section-number">25.5</span> My collaborator doesn’t understand this weird Google Docs file</h2>
+<p>It is what it is…</p>
+<p>The main idea behind this is that they mostly want to review plain text. If you try using trackdown, you will see that it shows raw Markdown in the file, no images, no plots, no formatting…</p>
+<p>You should also send them a PDF of that paper version so they can see everything neatly rendered in case they want to provide extra feedback not directly related to text. But they won’t be able to modify that directly. We assume they only want to suggest text changes themselves. For the rest, they either learn how to use the repository or you yourself should do those changes.</p>
+<p>Also, just remind them not to change orange text. You don’t want them to break your code, don’t you? It already says that at the start, but yeah, people don’t read those things…</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -795,13 +867,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./read-large-files.html" class="pagination-link" aria-label="Reading large files">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Reading large files</span></span>
+      <a href="./paper-git.html" class="pagination-link" aria-label="But you know, papers are collaborative...">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">But you know, papers are collaborative…</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./papers.html" class="pagination-link" aria-label="Write reproducible papers">
-        <span class="nav-page-text">Write reproducible papers</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./templates.html" class="pagination-link" aria-label="But how to follow the journal's style?">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">But how to follow the journal’s style?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -813,7 +885,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/pr-auto-checks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/trackdown.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

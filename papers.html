@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>19&nbsp; Automatic checks on Pull Requests – Follow the workflow</title>
+<title>Write reproducible papers – Follow the workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./papers.html" rel="next">
-<link href="./read-large-files.html" rel="prev">
+<link href="./positron.html" rel="next">
+<link href="./pr-auto-checks.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./papers.html">Write reproducible papers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pr-auto-checks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></span></a>
   </div>
 </li>
@@ -272,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./papers.html" class="sidebar-item-text sidebar-link">
+            <a href="./papers.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Write reproducible papers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -334,9 +334,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./r.html">Create an R package</a></li><li class="breadcrumb-item"><a href="./pr-auto-checks.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></h1>
+<h1 class="title">Write reproducible papers</h1>
 </div>
 
 
@@ -353,43 +353,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>By this point we assume you are already done with all your new code, you documented and tested it, or perhaps you just created some report in the form of an article. As we have seen in the <a href="#git-intro">Git intro</a>, it is now time to create a Pull Request so that someone else reviews what you have done. But when you create the Pull Request, our workflow is designed so that two checks are run automatically on GitHub, each time you push your changes to a branch which has an open Pull Request:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This third part has a different tone. You don’t need to read the previous ones. And I still need to update many things in those. You can read this independently.</p>
+</div>
+</div>
+<div class="right-quote">
+<blockquote class="blockquote">
+<p>“It doesn’t matter how beautiful your theory is, it doesn’t matter how smart you are. If it doesn’t agree with experiment, it’s wrong.”</p>
+<p>— <a href="https://physics.stackexchange.com/questions/697945/understanding-this-quote-by-feynman">Richard Feynman</a></p>
+<p>(My free translation: “If you can’t reproduce it, it didn’t happen.”)</p>
+</blockquote>
+</div>
+<p>You write papers.</p>
+<p>You somehow arrived here.</p>
+<p>Why am I writing this?</p>
 <ul>
-<li>First, the R CMD check is performed. We have seen in a previous section how you can run it locally, so you should have made sure it outputs no errors. Otherwise, you will see this step failing.</li>
-<li>Then, a linting check is performed. We have also seen how to autoformat your code, so that it follows the R code styling standards, and how to make sure that it is indeed well formatted. Otherwise, you will see this step failing.</li>
+<li>I learned about <a href="https://quarto.org/">Quarto</a> and I love it.</li>
+<li>You probably run some R code to get results for your paper.</li>
+<li>You can write both code and text in the same Quarto file. Your whole paper in one place.</li>
+<li>You can write one file and output various formats, following the style of each journal.</li>
+<li>Overall, you make papers more reproducible. It’s easier for others to reproduce your results.</li>
 </ul>
-<p>If any of the steps above fail, you will see something like this in your PR page:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/github_action_fail.png" class="img-fluid figure-img" alt="GitHub Action check fails"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Otherwise, if both checks succeeded, you will see something like:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/github_action_pass.png" class="img-fluid figure-img" alt="GitHub Action check succeeds"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Overall, you should be able to see this at the bottom of the PR:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="imgs/all_pr_ok.png" class="img-fluid figure-img" alt="GitHub Action Pull Request passed"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In case you are wondering, both checks we mentioned before are actually done in a single GitHub automatic step (these steps are called ‘GitHub actions’), so it should say ‘1 successful check’ instead of ‘2 successful checks’. However, there is an additional GitHub action there, which essentially just updates the documentation site (only when the PR is actually merged into the main branch). This is not relevant to you as a developer but it makes the overall workflow easier, since the project documentation is automatically updated without any more human intervention. If you want to know more about this automatic site update you can check this <a href="https://r-pkgs.org/website.html">section from the R Packages book</a>.</p>
-<p>Recall that for a PR to be accepted and merged into the main branch, it must also be reviewed by another developer. A good practice would be to make sure the GitHub checks pass before even asking for someone’s reviewing, because if any check failed you most likely need to add more code changes to fix them, so some of the code the reviewer could have checked before could become obsolete, and they would have to read it again, so we better avoid that.</p>
+<p>Give this a chance. Maybe you learn some interesting things along the way.</p>
 
 
 
@@ -795,13 +789,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./read-large-files.html" class="pagination-link" aria-label="Reading large files">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Reading large files</span></span>
+      <a href="./pr-auto-checks.html" class="pagination-link" aria-label="Automatic checks on Pull Requests">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Automatic checks on Pull Requests</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./papers.html" class="pagination-link" aria-label="Write reproducible papers">
-        <span class="nav-page-text">Write reproducible papers</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./positron.html" class="pagination-link" aria-label="Bye RStudio, welcome Positron">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Bye RStudio, welcome Positron</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -813,7 +807,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/pr-auto-checks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/papers.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
