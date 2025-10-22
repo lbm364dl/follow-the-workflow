@@ -1,6 +1,6 @@
 # Bye RStudio, welcome Positron
 
-To be fair, I would've preferred this title to be _Bye RStudio, welcome [Neovim](https://github.com/neovim/neovim)_. Yes, my editor is directly inside a command line. Yes, I know it's not the first thing you think about for beginners. For this reason, you're going to join me in this journey where we learn together how to use [Positron](https://positron.posit.co/).
+To be fair, I would've preferred the title to be _Bye RStudio, welcome [Neovim](https://neovim.io/)_. Yes, I edit my code in a command line, and you could too. Yes, I know it's not the first thing that comes to mind for beginners, but I wanted to mention it in case you're curious. Anyway, if you were using something like RStudio and want a better data science experience, here you're going to join me in this journey where we learn together how to use [Positron](https://positron.posit.co/).
 
 ## Elevator pitch
 
