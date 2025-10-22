@@ -1,24 +1,32 @@
 # But how to follow the journal's style?
 
-Did you find the example paper familiar? It follows Elsevier format.
+## The game is afoot
 
-How? Come on, take a quick look at the subfolder `_extensions/quarto-journals/elsevier`. Why is this working?
+Did you find the example paper familiar? It follows Elsevier style.
+
+How? Time to investigate! Come on, take a look at the subfolder `_extensions/quarto-journals/elsevier`. Why is this working?
 
 - In the file [`_extensions/quarto-journals/elsevier/_extension.yml`](https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/_extension.yml), a PDF format is specified.
 - In the file [`_quarto.yml`](https://github.com/lbm364dl/test-paper/blob/main/_quarto.yml), we choose a format `elsevier-pdf`. The dash separates the custom style name (`elsevier`) and the actual format (`pdf`).
   The custom template name must match the name of the subfolder in `_extensions`.
 
-But really, how do we set this custom format? It's really the _template partials_. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX. In this example, you see [`before-body.tex`](https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/before-body.tex) and [`title.tex`](https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/title.tex) being used (in the `elsevier/partials` subfolder). These are the parts of our document where we decide to apply some custom behaviour.
+No, but really, how do we set this custom format? It's the _template partials_. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX, without having to provide a fully fledged LaTeX thing, since then it would lose its magic. In this example, you see [`before-body.tex`](https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/before-body.tex) and [`title.tex`](https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/title.tex) being used (in the `elsevier/partials` subfolder). These are the parts of our document where we decide to apply some custom behaviour.
 
-Before you decide this is too hard for you, check next section.
+Of course you don't need to understand much about this just yet. Before you decide this is too hard for you, check the next section.
 
 ## Some people already created custom templates for you
 
-There are a few ready to use templates for some well-known journals. You can find them in [this list](https://github.com/quarto-journals#quarto-journal-templates).
+There are a few ready to use templates for some well-known journals. You can find them in [this list](https://quarto.org/docs/extensions/listing-journals.html)... Actually, I'm not sure how that list is maintained. Maybe there are more... You just need to find them. Anyway, how to use these?
 
-The one I used as an example is from there. You could have also installed it by writing in a terminal `quarto use template quarto-journals/elsevier` or any of the other names. If necessary, also remember to write the correct format name in `_quarto.yml`, e.g., if you instead use `quarto-journals/jasa`, you should write `jasa-pdf` as format.
+There's a [Positron extension](https://positron.posit.co/extensions.html) called [Quarto Wizard](https://quarto.org/docs/blog/posts/2025-10-20-quarto-wizard-1-0-0/). You can read that if you're curious. It's basically there to make it easier to manage [Quarto extensions](https://quarto.org/docs/extensions/). Custom templates for articles are just one kind of Quarto extension, so this might be handy here.
 
-Just play a bit with the options. I believe in you.
+After installing the extension, you can play a bit with the commands. For the one that allows you to install extensions, you might also find it easier to first [search through them here](https://m.canouil.dev/quarto-extensions/). The ones that are custom article templates are most likely under _Formats_. Or the ones that directly appear in the command _Quarto Wizard: Use Template_. Or the ones from the first list I linked... You can find out.
+
+![Abracadabra, hocus pocus, install Quarto extensions](imgs/install_quarto_extensions.png)
+
+After installing a custom template, also remember to write the correct format name in `_quarto.yml`, e.g., if you instead use `quarto-journals/jasa`, you should write `jasa-pdf` as format.
+
+Just play a bit with the different options. I believe in you.
 
 ## There's no template for my journal
 
