@@ -275,7 +275,7 @@
     "href": "positron.html",
     "title": "20  Bye RStudio, welcome Positron",
     "section": "",
-    "text": "20.1 Elevator pitch\nTo be fair, I would’ve preferred this title to be Bye RStudio, welcome Neovim. Yes, my editor is directly inside a command line. Yes, I know it’s not the first thing you think about for beginners. For this reason, you’re going to join me in this journey where we learn together how to use Positron.\nPositron is a code editor made by the same people who developed RStudio. They’re trying to build a more general code editor for data science, similar to Visual Studio Code, if you even know about that one. Why move away from RStudio you say? I don’t know! I’m going to trust these folks, and you should give them a chance too. If you’re completely against the idea and want to keep using RStudio, you’ll have to fill some gaps by yourself in this guide.\nWe need to start, of course, by installing this Positron thing.",
+    "text": "20.1 Elevator pitch\nTo be fair, I would’ve preferred the title to be Bye RStudio, welcome Neovim. Yes, I edit my code in a command line, and you could too. Yes, I know it’s not the first thing that comes to mind for beginners, but I wanted to mention it in case you’re curious. Anyway, if you were using something like RStudio and want a better data science experience, here you’re going to join me in this journey where we learn together how to use Positron.\nPositron is a code editor made by the same people who developed RStudio. They’re trying to build a more general code editor for data science, similar to Visual Studio Code, if you even know about that one. Why move away from RStudio you say? I don’t know! I’m going to trust these folks, and you should give them a chance too. If you’re completely against the idea and want to keep using RStudio, you’ll have to fill some gaps by yourself in this guide.\nWe need to start, of course, by installing this Positron thing.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bye RStudio, welcome Positron</span>"
@@ -308,7 +308,7 @@
     "href": "quarto.html",
     "title": "21  Embrace Quarto",
     "section": "",
-    "text": "21.1 The writer’s soliloquy rant\nEnough talking about the editor. We want to write papers. How? Quarto. Yes, I could write some boring introduction about Quarto here. Just go and take a look at their site’s home page. When you’re satisfied come back. If you’re not satisfied, please also come back. Let’s at least run one example before you decide to go back to Microsoft Word.\nIf you’ve tried to submit some papers in journals, you might have heard about this thing called LaTeX even if you never used it. It’s one format they typically accept. It’s a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.\nBeautiful PDFs come from ugly LaTeX files. Yes, I mean, there’s a lot of unnecessary jargon in a LaTeX file that you probably don’t care about. I won’t try to defend LaTeX. You just want to write your document, don’t you? Well, it’s time for Quarto. Luckily for you, the Positron devs already included Quarto in your Positron editor so if we intend to use that, you don’t need to install anything else!",
+    "text": "21.1 The writer’s soliloquy rant\nEnough talking about the editor. We want to write papers. How? Quarto. Yes, I could write some boring introduction about Quarto here. Just go and take a look at their site’s home page. When you’re satisfied come back. If you’re not satisfied, please also come back. Let’s at least run one example before you decide to go back to Microsoft Word.\nIf you’ve tried to submit some papers in journals, you might have heard about this thing called LaTeX even if you never used it yourself. It’s one format they typically accept. It’s a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.\nBeautiful PDFs come from ugly LaTeX files. Yes, I mean, there’s a lot of unnecessary jargon in a LaTeX file that you probably don’t care about. I won’t try to defend LaTeX. You just want to write your document, don’t you? Well, it’s time for Quarto. Luckily for you, the Positron devs already included Quarto in your Positron editor so if we intend to use that, you don’t need to install anything else!",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
@@ -319,7 +319,7 @@
     "href": "quarto.html#give-me-that-paper-already",
     "title": "21  Embrace Quarto",
     "section": "21.2 Give me that paper already",
-    "text": "21.2 Give me that paper already\nCome on, search for the command new folder from git, just as I told you in previous section. You can copy URLs of GitHub repositories directly. I created an example for you. It’s at https://github.com/lbm364dl/test-paper. You can pay a visit if you’re interested or just copy and paste the URL:\n\n\n\nGetting an example from my GitHub\n\n\nAnd we get our example Quarto project! Open the index.qmd file:\n\n\n\nOpened Quarto file index.qmd",
+    "text": "21.2 Give me that paper already\nCome on, search for the command New Folder from Git, just as I told you in the previous section. You can copy URLs of GitHub repositories directly. I created an example for you. It’s at https://github.com/lbm364dl/test-paper. You can pay a visit if you’re interested or just copy and paste the URL:\n\n\n\nFirst step in your future relationship with Quarto\n\n\nAnd we get our example Quarto project! Open the index.qmd file:\n\n\n\nWelcome Alice Smith from University of Example",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Embrace Quarto</span>"
@@ -374,7 +374,7 @@
     "href": "quarto-syntax.html#what-are-these-weird-symbols-for-the-math-formulas",
     "title": "22  But how do I write in Quarto syntax?",
     "section": "22.2 What are these weird symbols for the math formulas?",
-    "text": "22.2 What are these weird symbols for the math formulas?\nI told you to click all things, so I hope this is not new for you. When you try to unravel that math formula I included as an example, you see this:\n\n\n\nPeeping inside the Matrix of math formulas\n\n\nWhat’s going on there?\nRemember we talked about this format called LaTeX that you didn’t need to know about? If your paper doesn’t require writing math formulas, you’re safe. Otherwise…\nWelcome to LaTeX math formulas. Yes, we’re in Quarto, but we still use LaTeX syntax for math formulas. So you’ll need to learn how to do that. No, I won’t teach a LaTeX course here. Ask your favorite AI or something.",
+    "text": "22.2 What are these weird symbols for the math formulas?\nI told you to click all things, so I hope this is not new for you. When you try to unravel that math formula I included as an example, you see this:\n\n\n\nPeeping inside the Matrix of math formulas\n\n\nWhat’s going on there?\nRemember we talked about this format called LaTeX that you didn’t need to know about? If your paper doesn’t require writing math formulas, you’re safe. Otherwise…\nWelcome to LaTeX math formulas. Yes, we’re in Quarto, but we still use LaTeX syntax for math formulas. So you’ll need to learn how to do that. No, this won’t be a LaTeX math guide. Ask your favorite AI or something.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
@@ -385,7 +385,7 @@
     "href": "quarto-syntax.html#quarto-runs-my-code",
     "title": "22  But how do I write in Quarto syntax?",
     "section": "22.3 Quarto runs my code?!",
-    "text": "22.3 Quarto runs my code?!\nYes! That’s one of the best features. You can include code blocks in Quarto files, and they will be run and their output included in the final document. You can also choose if you want to include only code, only output, or both.\n\n\n\nSome R code in the wild\n\n\nRemember when we had some errors about missing R packages the first time we tried to preview? Well, in theory Quarto works without R. But I included some R code chunks in our document, so it needed those package installations to be able to run the code.\nIn the above example, this {r} thing indicates that this is R code. By default, Quarto runs code but only shows its output. The special comment #| echo: true tells Quarto that we also want to show the actual code in the final document, not only its output.\nIf you want to learn more about running code inside Quarto, you can probably start here.",
+    "text": "22.3 Quarto runs my code?!\nYes! That’s one of the best features. You can include code blocks in Quarto files, and they will be executed and their output included in the final document. You can also choose if you want to include only code, only output, or both.\n\n\n\nSome R code in the wild\n\n\nRemember when we had some errors about missing R packages the first time we tried to preview? Well, in theory Quarto works without R. But I included some R code chunks in our document, so it needed those package installations to be able to run the code.\nIn the above example, this {r} thing indicates that this is R code. By default, Quarto runs code but only shows its output. The special comment #| echo: true tells Quarto that we also want to show the actual code in the final document, not only its output.\nIf you want to learn more about running code inside Quarto, you can probably start here.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>But how do I write in Quarto syntax?</span>"
@@ -440,7 +440,7 @@
     "href": "paper-git.html",
     "title": "24  But you know, papers are collaborative…",
     "section": "",
-    "text": "24.1 Why are you assuming everyone has the ability to code!?\nOf course we don’t live under a rock. I’m writing this because I believe writing science should be an extension of writing programming. All researchers are like programmers, they just don’t know it.\nHow to collaborate? Use git. Just like with any piece of code, I’m also suggesting to store your paper in a GitHub repository and give access to other collaborators.\nWhat’s git and GitHub you ask? I devoted the first part of this book to that, but I’m not really satisfied with it and I will rewrite everything at some point.\nHere’s the thing: you don’t need to learn weird git commands and use them in a weird command line if you don’t want to. You can do all the basic things directly from Positron.\nI really believe everyone in the scientific community should learn to code. And I hope you will like this approach and invite your collaborators to do so. But, if you’re the skeptical reader who will tell me that your collaborators aren’t willing to invest time to learn, I give you two options:",
+    "text": "24.1 Pfff another coding sermon\nOf course we don’t live under a rock. I’m writing this because I believe writing science should be an extension of writing programming. All researchers are like programmers, they just don’t know it.\nHow to collaborate? Use git. Just like with any piece of code, I’m also suggesting to store your paper in a GitHub repository and give access to other collaborators.\nWhat’s git and GitHub you ask? I devoted the first part of this book to that, but I’m not really satisfied with it and I will rewrite everything at some point.\nHere’s the thing: you don’t need to learn weird git commands and use them in a weird command line if you don’t want to. You can do all the basic things directly from Positron.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
@@ -450,19 +450,19 @@
     "objectID": "paper-git.html#why-are-you-assuming-everyone-has-the-ability-to-code",
     "href": "paper-git.html#why-are-you-assuming-everyone-has-the-ability-to-code",
     "title": "24  But you know, papers are collaborative…",
-    "section": "",
-    "text": "Don’t collaborate with them.\nOK, OK, that was harsh. I propose an alternative in the next chapter.",
+    "section": "24.2 Why are you assuming everyone has the ability to code!?",
+    "text": "24.2 Why are you assuming everyone has the ability to code!?\nI really believe everyone in the scientific community should learn to code. And I hope you will like this approach and invite your collaborators to do so. But, if you’re the skeptical reader who will tell me that your collaborators aren’t willing to invest time to learn, I give you two options:\n\nDon’t collaborate with them.\nOK, OK, that was harsh. I propose an alternative in the next chapter.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
     ]
   },
   {
-    "objectID": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github-account",
-    "href": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github-account",
+    "objectID": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github",
+    "href": "paper-git.html#how-do-i-upload-this-thing-to-my-own-github",
     "title": "24  But you know, papers are collaborative…",
-    "section": "24.2 How do I upload this thing to my own GitHub account?",
-    "text": "24.2 How do I upload this thing to my own GitHub account?\nI will give you two options:\n\nFork: copy others’ repositories directly from GitHub, start from scratch\nIf you know you want to start from someone’s project but then start adding your own things, you can fork their repository. This will create an exact clone in your own account.\n\n\n\nShamelessly copying a repository\n\n\nOnce you have that, you can get a local copy the same way we did at the start using the command “New folder from git”.\n\n\nPush local copy: you already did some work that should be saved\nIf you followed the previous chapters and created a local folder from the public URL of my repository, you’re here. If you played a bit with the paper and added some things that you want to keep, we should just create a new repository in your account which will include all your local content.\n\nYour local copy is linking to my own remote repository. Let’s remove that. Search the command “Git: Remove Remote” and get rid of my repository.\n\n\n\n\nBye bye test paper\n\n\n\nSearch the command “Publish to GitHub”. You will see some default options, but you can also choose your own name.\n\n\n\n\nNobody will tell me how to name my repository\n\n\n\nDone! Check your GitHub account. You should find a new repository with the local content.",
+    "section": "24.3 How do I upload this thing to my own GitHub?",
+    "text": "24.3 How do I upload this thing to my own GitHub?\nI will give you two options:\n\nFork: copy others’ repositories directly from GitHub, start from scratch\nIf you know you want to start from someone’s project but then start adding your own things, you can fork their repository. This will create an exact clone in your own account.\n\n\n\nShamelessly copying a repository\n\n\nOnce you have that, you can get a local copy the same way we did at the start using the command “New folder from git”.\n\n\nPush local copy: you already did some work that should be saved\nIf you followed the previous chapters and created a local folder from the public URL of my repository, you’re here. If you played a bit with the paper and added some things that you want to keep, we should just create a new repository in your account which will include all your local content.\n\nYour local copy is linking to my own remote repository. Let’s remove that. Search the command “Git: Remove Remote” and get rid of my repository.\n\n\n\n\nBye bye test paper\n\n\n\nSearch the command “Publish to GitHub”. You will see some default options, but you can also choose your own name.\n\n\n\n\nNobody will tell me how to name my repository\n\n\n\nDone! Check your GitHub account. You should find a new repository with the local content.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
@@ -472,8 +472,8 @@
     "objectID": "paper-git.html#ok-but-how-do-i-actually-use-git",
     "href": "paper-git.html#ok-but-how-do-i-actually-use-git",
     "title": "24  But you know, papers are collaborative…",
-    "section": "24.3 OK but how do I actually use git?",
-    "text": "24.3 OK but how do I actually use git?\nAs I said, you can read the boring first part of this book and maybe figure out how to do those things directly from Positron. Or you can search other guides and learn by yourself. You can start from Positron’s Git Version Control guide.",
+    "section": "24.4 OK but how do I actually use git?",
+    "text": "24.4 OK but how do I actually use git?\nAs I said, you can read the boring first part of this book and maybe figure out how to do those things directly from Positron. Or you can search other guides and learn by yourself. You can start from Positron’s Git Version Control guide.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>But you know, papers are collaborative...</span>"
@@ -550,7 +550,29 @@
     "href": "templates.html",
     "title": "26  But how to follow the journal’s style?",
     "section": "",
-    "text": "26.1 Some people already created custom templates for you\nDid you find the example paper familiar? It follows Elsevier format.\nHow? Come on, take a quick look at the subfolder _extensions/quarto-journals/elsevier. Why is this working?\nBut really, how do we set this custom format? It’s really the template partials. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX. In this example, you see before-body.tex and title.tex being used (in the elsevier/partials subfolder). These are the parts of our document where we decide to apply some custom behaviour.\nBefore you decide this is too hard for you, check next section.\nThere are a few ready to use templates for some well-known journals. You can find them in this list.\nThe one I used as an example is from there. You could have also installed it by writing in a terminal quarto use template quarto-journals/elsevier or any of the other names. If necessary, also remember to write the correct format name in _quarto.yml, e.g., if you instead use quarto-journals/jasa, you should write jasa-pdf as format.\nJust play a bit with the options. I believe in you.",
+    "text": "26.1 The game is afoot\nDid you find the example paper familiar? It follows Elsevier style.\nHow? Time to investigate! Come on, take a look at the subfolder _extensions/quarto-journals/elsevier. Why is this working?\nNo, but really, how do we set this custom format? It’s the template partials. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX, without having to provide a fully fledged LaTeX thing, since then it would lose its magic. In this example, you see before-body.tex and title.tex being used (in the elsevier/partials subfolder). These are the parts of our document where we decide to apply some custom behaviour.\nOf course you don’t need to understand much about this just yet. Before you decide this is too hard for you, check the next section.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
+    ]
+  },
+  {
+    "objectID": "templates.html#the-game-is-afoot",
+    "href": "templates.html#the-game-is-afoot",
+    "title": "26  But how to follow the journal’s style?",
+    "section": "",
+    "text": "In the file _extensions/quarto-journals/elsevier/_extension.yml, a PDF format is specified.\nIn the file _quarto.yml, we choose a format elsevier-pdf. The dash separates the custom style name (elsevier) and the actual format (pdf). The custom template name must match the name of the subfolder in _extensions.",
+    "crumbs": [
+      "Write reproducible papers",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
+    ]
+  },
+  {
+    "objectID": "templates.html#some-people-already-created-custom-templates-for-you",
+    "href": "templates.html#some-people-already-created-custom-templates-for-you",
+    "title": "26  But how to follow the journal’s style?",
+    "section": "26.2 Some people already created custom templates for you",
+    "text": "26.2 Some people already created custom templates for you\nThere are a few ready to use templates for some well-known journals. You can find them in this list… Actually, I’m not sure how that list is maintained. Maybe there are more… You just need to find them. Anyway, how to use these?\nThere’s a Positron extension called Quarto Wizard. You can read that if you’re curious. It’s basically there to make it easier to manage Quarto extensions. Custom templates for articles are just one kind of Quarto extension, so this might be handy here.\nAfter installing the extension, you can play a bit with the commands. For the one that allows you to install extensions, you might also find it easier to first search through them here. The ones that are custom article templates are most likely under Formats. Or the ones that directly appear in the command Quarto Wizard: Use Template. Or the ones from the first list I linked… You can find out.\n\n\n\nAbracadabra, hocus pocus, install Quarto extensions\n\n\nAfter installing a custom template, also remember to write the correct format name in _quarto.yml, e.g., if you instead use quarto-journals/jasa, you should write jasa-pdf as format.\nJust play a bit with the different options. I believe in you.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
@@ -560,8 +582,8 @@
     "objectID": "templates.html#theres-no-template-for-my-journal",
     "href": "templates.html#theres-no-template-for-my-journal",
     "title": "26  But how to follow the journal’s style?",
-    "section": "26.2 There’s no template for my journal",
-    "text": "26.2 There’s no template for my journal\nThen it’s your time to shine… You’ll have to create one yourself! OK, maybe you’ll struggle a bit, but I’m sure you can do it. And then you can share it and also help others!\nI won’t go into detail here. You should try to do it by yourself. Things to have in mind:\n\nQuarto already wrote a nice introduction for creating custom journal formats.\nThey also provide an example repository which you can start from (also mentioned in the previous link).\nMost journals should provide some LaTeX template on their site. You most likely don’t need the whole thing, it’s probably a mess. I would just take the most important parts and get something working as fast as possible. Later on you can worry about the details. Or just ignore them. If the output looks like other papers in that journal, you’re good to go. You might also ask your favourite AI for help.\nOnce it’s included in a public repository, you can use it the same way as the others. Just run quarto use template your-github/your-repo.",
+    "section": "26.3 There’s no template for my journal",
+    "text": "26.3 There’s no template for my journal\nThen it’s your time to shine… You’ll have to create one yourself! OK, maybe you’ll struggle a bit, but I’m sure you can do it. And then you can share it and also help others!\nI won’t go into detail here. You should try to do it by yourself. Things to have in mind:\n\nQuarto already wrote a nice introduction for creating custom journal formats.\nThey also provide an example repository which you can start from (also mentioned in the previous link).\nMost journals should provide some LaTeX template on their site. You most likely don’t need the whole thing, it’s probably a mess. I would just take the most important parts and get something working as fast as possible. Later on you can worry about the details. Or just ignore them. If the output looks like other papers in that journal, you’re good to go. You might also ask your favourite AI for help.\nOnce it’s included in a public repository, you can use it the same way as the others. Just run quarto use template your-github/your-repo.",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"
@@ -571,8 +593,8 @@
     "objectID": "templates.html#its-not-only-papers",
     "href": "templates.html#its-not-only-papers",
     "title": "26  But how to follow the journal’s style?",
-    "section": "26.3 It’s not only papers…",
-    "text": "26.3 It’s not only papers…\nYou can also use Quarto to write many other things. Here I focused on papers, but you might also write your PhD thesis! I created myself a custom template for UPM thesis.\nTake a quick look. You can see that the project type in _quarto.yml is book. I don’t really know what important differences this has compared to manuscript. It’s probably almost the same, but this makes it easier to write each chapter or section in a separate Quarto file, to keep everything more organized. I myself took inspiration from this template.\nAgain, you can take these as a starting point and build your own template. Please share it if you do!",
+    "section": "26.4 It’s not only papers…",
+    "text": "26.4 It’s not only papers…\nYou can also use Quarto to write many other things. Here I focused on papers, but you might also write your PhD thesis! I created myself a custom template for UPM thesis.\nTake a quick look. You can see that the project type in _quarto.yml is book. I don’t really know what important differences this has compared to manuscript. It’s probably almost the same, but this makes it easier to write each chapter or section in a separate Quarto file, to keep everything more organized. I myself took inspiration from this template.\nAgain, you can take these as a starting point and build your own template. Please share it if you do!",
     "crumbs": [
       "Write reproducible papers",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>But how to follow the journal's style?</span>"

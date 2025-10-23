@@ -332,9 +332,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#some-people-already-created-custom-templates-for-you" id="toc-some-people-already-created-custom-templates-for-you" class="nav-link active" data-scroll-target="#some-people-already-created-custom-templates-for-you"><span class="header-section-number">26.1</span> Some people already created custom templates for you</a></li>
-  <li><a href="#theres-no-template-for-my-journal" id="toc-theres-no-template-for-my-journal" class="nav-link" data-scroll-target="#theres-no-template-for-my-journal"><span class="header-section-number">26.2</span> There’s no template for my journal</a></li>
-  <li><a href="#its-not-only-papers" id="toc-its-not-only-papers" class="nav-link" data-scroll-target="#its-not-only-papers"><span class="header-section-number">26.3</span> It’s not only papers…</a></li>
+  <li><a href="#the-game-is-afoot" id="toc-the-game-is-afoot" class="nav-link active" data-scroll-target="#the-game-is-afoot"><span class="header-section-number">26.1</span> The game is afoot</a></li>
+  <li><a href="#some-people-already-created-custom-templates-for-you" id="toc-some-people-already-created-custom-templates-for-you" class="nav-link" data-scroll-target="#some-people-already-created-custom-templates-for-you"><span class="header-section-number">26.2</span> Some people already created custom templates for you</a></li>
+  <li><a href="#theres-no-template-for-my-journal" id="toc-theres-no-template-for-my-journal" class="nav-link" data-scroll-target="#theres-no-template-for-my-journal"><span class="header-section-number">26.3</span> There’s no template for my journal</a></li>
+  <li><a href="#its-not-only-papers" id="toc-its-not-only-papers" class="nav-link" data-scroll-target="#its-not-only-papers"><span class="header-section-number">26.4</span> It’s not only papers…</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lbm364dl/follow-the-workflow/edit/main/templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lbm364dl/follow-the-workflow/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -360,22 +361,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Did you find the example paper familiar? It follows Elsevier format.</p>
-<p>How? Come on, take a quick look at the subfolder <code>_extensions/quarto-journals/elsevier</code>. Why is this working?</p>
+<section id="the-game-is-afoot" class="level2" data-number="26.1">
+<h2 data-number="26.1" class="anchored" data-anchor-id="the-game-is-afoot"><span class="header-section-number">26.1</span> The game is afoot</h2>
+<p>Did you find the example paper familiar? It follows Elsevier style.</p>
+<p>How? Time to investigate! Come on, take a look at the subfolder <code>_extensions/quarto-journals/elsevier</code>. Why is this working?</p>
 <ul>
 <li>In the file <a href="https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/_extension.yml"><code>_extensions/quarto-journals/elsevier/_extension.yml</code></a>, a PDF format is specified.</li>
 <li>In the file <a href="https://github.com/lbm364dl/test-paper/blob/main/_quarto.yml"><code>_quarto.yml</code></a>, we choose a format <code>elsevier-pdf</code>. The dash separates the custom style name (<code>elsevier</code>) and the actual format (<code>pdf</code>). The custom template name must match the name of the subfolder in <code>_extensions</code>.</li>
 </ul>
-<p>But really, how do we set this custom format? It’s really the <em>template partials</em>. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX. In this example, you see <a href="https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/before-body.tex"><code>before-body.tex</code></a> and <a href="https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/title.tex"><code>title.tex</code></a> being used (in the <code>elsevier/partials</code> subfolder). These are the parts of our document where we decide to apply some custom behaviour.</p>
-<p>Before you decide this is too hard for you, check next section.</p>
-<section id="some-people-already-created-custom-templates-for-you" class="level2" data-number="26.1">
-<h2 data-number="26.1" class="anchored" data-anchor-id="some-people-already-created-custom-templates-for-you"><span class="header-section-number">26.1</span> Some people already created custom templates for you</h2>
-<p>There are a few ready to use templates for some well-known journals. You can find them in <a href="https://github.com/quarto-journals#quarto-journal-templates">this list</a>.</p>
-<p>The one I used as an example is from there. You could have also installed it by writing in a terminal <code>quarto use template quarto-journals/elsevier</code> or any of the other names. If necessary, also remember to write the correct format name in <code>_quarto.yml</code>, e.g., if you instead use <code>quarto-journals/jasa</code>, you should write <code>jasa-pdf</code> as format.</p>
-<p>Just play a bit with the options. I believe in you.</p>
+<p>No, but really, how do we set this custom format? It’s the <em>template partials</em>. Remember I told you that, before producing a PDF, your Quarto document is converted to LaTeX. Quarto allows you to modify some parts of that LaTeX, without having to provide a fully fledged LaTeX thing, since then it would lose its magic. In this example, you see <a href="https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/before-body.tex"><code>before-body.tex</code></a> and <a href="https://github.com/lbm364dl/test-paper/blob/main/_extensions/quarto-journals/elsevier/partials/title.tex"><code>title.tex</code></a> being used (in the <code>elsevier/partials</code> subfolder). These are the parts of our document where we decide to apply some custom behaviour.</p>
+<p>Of course you don’t need to understand much about this just yet. Before you decide this is too hard for you, check the next section.</p>
 </section>
-<section id="theres-no-template-for-my-journal" class="level2" data-number="26.2">
-<h2 data-number="26.2" class="anchored" data-anchor-id="theres-no-template-for-my-journal"><span class="header-section-number">26.2</span> There’s no template for my journal</h2>
+<section id="some-people-already-created-custom-templates-for-you" class="level2" data-number="26.2">
+<h2 data-number="26.2" class="anchored" data-anchor-id="some-people-already-created-custom-templates-for-you"><span class="header-section-number">26.2</span> Some people already created custom templates for you</h2>
+<p>There are a few ready to use templates for some well-known journals. You can find them in <a href="https://quarto.org/docs/extensions/listing-journals.html">this list</a>… Actually, I’m not sure how that list is maintained. Maybe there are more… You just need to find them. Anyway, how to use these?</p>
+<p>There’s a <a href="https://positron.posit.co/extensions.html">Positron extension</a> called <a href="https://quarto.org/docs/blog/posts/2025-10-20-quarto-wizard-1-0-0/">Quarto Wizard</a>. You can read that if you’re curious. It’s basically there to make it easier to manage <a href="https://quarto.org/docs/extensions/">Quarto extensions</a>. Custom templates for articles are just one kind of Quarto extension, so this might be handy here.</p>
+<p>After installing the extension, you can play a bit with the commands. For the one that allows you to install extensions, you might also find it easier to first <a href="https://m.canouil.dev/quarto-extensions/">search through them here</a>. The ones that are custom article templates are most likely under <em>Formats</em>. Or the ones that directly appear in the command <em>Quarto Wizard: Use Template</em>. Or the ones from the first list I linked… You can find out.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/install_quarto_extensions.png" class="img-fluid figure-img"></p>
+<figcaption>Abracadabra, hocus pocus, install Quarto extensions</figcaption>
+</figure>
+</div>
+<p>After installing a custom template, also remember to write the correct format name in <code>_quarto.yml</code>, e.g., if you instead use <code>quarto-journals/jasa</code>, you should write <code>jasa-pdf</code> as format.</p>
+<p>Just play a bit with the different options. I believe in you.</p>
+</section>
+<section id="theres-no-template-for-my-journal" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="theres-no-template-for-my-journal"><span class="header-section-number">26.3</span> There’s no template for my journal</h2>
 <p>Then it’s your time to shine… You’ll have to create one yourself! OK, maybe you’ll struggle a bit, but I’m sure you can do it. And then you can share it and also help others!</p>
 <p>I won’t go into detail here. You should try to do it by yourself. Things to have in mind:</p>
 <ul>
@@ -385,8 +397,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Once it’s included in a public repository, you can use it the same way as the others. Just run <code>quarto use template your-github/your-repo</code>.</li>
 </ul>
 </section>
-<section id="its-not-only-papers" class="level2" data-number="26.3">
-<h2 data-number="26.3" class="anchored" data-anchor-id="its-not-only-papers"><span class="header-section-number">26.3</span> It’s not only papers…</h2>
+<section id="its-not-only-papers" class="level2" data-number="26.4">
+<h2 data-number="26.4" class="anchored" data-anchor-id="its-not-only-papers"><span class="header-section-number">26.4</span> It’s not only papers…</h2>
 <p>You can also use Quarto to write many other things. Here I focused on papers, but you might also write your PhD thesis! I created myself a <a href="https://github.com/lbm364dl/quarto-upm-thesis">custom template</a> for <a href="https://www.upm.es/">UPM</a> thesis.</p>
 <p>Take a quick look. You can see that the project type in <code>_quarto.yml</code> is <code>book</code>. I don’t really know what important differences this has compared to <code>manuscript</code>. It’s probably almost the same, but this makes it easier to write each chapter or section in a separate Quarto file, to keep everything more organized. I myself took inspiration from <a href="https://github.com/nmfs-opensci/quarto-thesis">this template</a>.</p>
 <p>Again, you can take these as a starting point and build your own template. Please share it if you do!</p>
