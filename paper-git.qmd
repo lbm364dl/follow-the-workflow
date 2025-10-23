@@ -1,5 +1,7 @@
 # But you know, papers are collaborative...
 
+## Pfff another coding sermon
+
 Of course we don't live under a rock. I'm writing this because I believe writing science should be an extension of writing programming. All researchers are like programmers, they just don't know it.
 
 How to collaborate? Use git. Just like with any piece of code, I'm also suggesting to store your paper in a GitHub repository and give access to other collaborators.
@@ -15,7 +17,7 @@ I really believe everyone in the scientific community should learn to code. And 
 - Don't collaborate with them.
 - OK, OK, that was harsh. I propose an alternative in the [next chapter](trackdown.qmd).
 
-## How do I upload this thing to my own GitHub account?
+## How do I upload this thing to my own GitHub?
 
 I will give you two options:
 
