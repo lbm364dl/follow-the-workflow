@@ -11,19 +11,19 @@
 
 Enough talking about the editor. We want to write papers. How? [Quarto](https://quarto.org/). Yes, I could write some boring introduction about Quarto here. Just go and take a look at their site's home page. When you're satisfied come back. If you're not satisfied, please also come back. Let's at least run one example before you decide to go back to Microsoft Word.
 
-If you've tried to submit some papers in journals, you might have heard about this thing called LaTeX even if you never used it. It's one format they typically accept. It's a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.
+If you've tried to submit some papers in journals, you might have heard about this thing called [LaTeX](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) even if you never used it yourself. It's one format they typically accept. It's a more coding-like way of writing documents. You write some weird things along with actual text, and you get a PDF in the end. But a beautiful one indeed.
 
 Beautiful PDFs come from ugly LaTeX files. Yes, I mean, there's a lot of unnecessary jargon in a LaTeX file that you probably don't care about. I won't try to defend LaTeX. You just want to write your document, don't you? Well, it's time for Quarto. Luckily for you, the Positron devs already included Quarto in your Positron editor so if we intend to use that, you don't need to install anything else!
 
 ## Give me that paper already
 
-Come on, search for the command _new folder from git_, just as I told you in previous section. You can copy URLs of GitHub repositories directly. I created an example for you. It's at <https://github.com/lbm364dl/test-paper>. You can pay a visit if you're interested or just copy and paste the URL:
+Come on, search for the command _New Folder from Git_, just as I told you in the previous section. You can copy URLs of GitHub repositories directly. I created an example for you. It's at <https://github.com/lbm364dl/test-paper>. You can pay a visit if you're interested or just copy and paste the URL:
 
-![Getting an example from my GitHub](imgs/new_folder_from_git.png)
+![First step in your future relationship with Quarto](imgs/new_folder_from_git.png)
 
 And we get our example Quarto project! Open the `index.qmd` file:
 
-![Opened Quarto file index.qmd](imgs/open_index_qmd.png)
+![Welcome Alice Smith from University of Example](imgs/open_index_qmd.png)
 
 ## Let's preview that...
 
@@ -40,7 +40,7 @@ What is this `renv::restore()` thing? Just a simple command that will install al
 
 ![Restore those packages!](imgs/renv_restore.png)
 
-If you want to know more about renv, go visit the [Virtual environments with renv](#virtual-environments-with-renv) chapter or read any better guide, even the [official renv docs](https://rstudio.github.io/renv/articles/renv.html). If for some reason you're an renv hater, just remove `source("renv/activate.R")` from the `.Rprofile` file and then you can also get rid of the `renv` folder and the `renv.lock` file. But if you're really an renv hater, you probably already knew that.
+If you want to know more about renv, go visit the [Virtual environments with renv](renv.qmd) chapter or read any better guide, even the [official renv docs](https://rstudio.github.io/renv/articles/renv.html). If for some reason you're an renv hater, just remove `source("renv/activate.R")` from the `.Rprofile` file and then you can also get rid of the `renv` folder and the `renv.lock` file. But if you're really an renv hater, you probably already knew that.
 
 ## ...tiny tiny paper
 
