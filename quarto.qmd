@@ -44,7 +44,11 @@ If you want to know more about renv, go visit the [Virtual environments with ren
 
 ## ...tiny tiny paper
 
-OK, OK, we installed some packages, we should get no errors now. Just hit again that _Preview_ button. Hopefully you see this:
+OK, OK, we installed some packages, we should get no errors now. Just hit again that _Preview_ button. 
+
+If it failed again, I hope it's because you're missing a LaTeX installation. Then you should just open the _terminal_ tab and install using the command `quarto install tinytex`. TinyTex, as the same suggests, is just a tiny version of LaTeX with only the most basic things we need (a full LaTeX installation can take ages).
+
+Hopefully you now see this:
 
 ![Hey, that output is too small, I can't see anything](imgs/quarto_preview_output.png)
 

@@ -45,7 +45,7 @@ If you don't trust what this thing might do, I think the best option isn't quitt
 Alright, once you have your desired Google account, get ready for the ~~depressing~~ fun instructions. Please, bear with me, you'll only have to do this once:
 
 1. Open [your Google Cloud Platform project](https://console.cloud.google.com/), signed in with your Google account. You might be asked to add another authentication step to your account. Just do that and then keep going.
-2. Open [this link](https://console.cloud.google.com/auth/overview/create) to create an _app_ (whatever that means). Fill things:
+2. Open [this link](https://console.cloud.google.com/auth/overview/create) to create an _app_ (whatever that means). You might be asked to create a project first. Just do that. Then try again. Fill things:
     - App Information:
         - App name: whatever, e.g., Trackdown
         - User support email: your own email
@@ -67,8 +67,8 @@ Alright, once you have your desired Google account, get ready for the ~~depressi
 7. Actually use these credentials:
     - Put that JSON file in the main folder of the project (the same folder where the `README.md` file is).
     - Rename it as `trackdown_access.json`. The `.json` is the extension, and you might not need to write it if you use e.g. Windows file explorer. If something goes wrong, make sure you didn't name it `trackdown_access.json.json` by mistake.
-8. Restart your R session. Your credentials are read automatically from `.Rprofile` every time you open an R session here. If you already had an open session while setting the credentials file, it won't be read until you restart the session.
-9. Actually use trackdown! Check the [previous section](#sync) for the important functions. When using trackdown update/download functions, the first time you will be asked to grant access in your browser. **Toggle the _allow read/write access_ button before continuing**. Otherwise it won't work.
+8. Restart your R session. Your credentials are read automatically from `.Rprofile` every time you open an R session here. If you already had an open session while setting the credentials file, it won't be read until you restart the session. From Positron, you can either close and open it again, or run the command _Interpreter: Restart Activate Interpreter Session_.
+9. Actually use trackdown! Check the [previous section](#sync) for the important functions. When using trackdown update/download functions, the first time you will be asked to grant access in your browser. **Toggle the _allow read/write access_ button before continuing**. Otherwise it won't work. If you forgot to do this, repeat from step 6 and you should be asked again.
 
 ## I'm not really sure how to integrate both places... {#workflow}
 
