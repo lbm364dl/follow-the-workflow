@@ -45,7 +45,7 @@ If you don't trust what this thing might do, I think the best option isn't quitt
 Alright, once you have your desired Google account, get ready for the ~~depressing~~ fun instructions. Please, bear with me, you'll only have to do this once:
 
 1. Open [your Google Cloud Platform project](https://console.cloud.google.com/), signed in with your Google account. You might be asked to add another authentication step to your account. Just do that and then keep going.
-2. Open [this link](https://console.cloud.google.com/auth/overview/create) to create an _app_ (whatever that means). Fill things:
+2. Open [this link](https://console.cloud.google.com/auth/overview/create) to create an _app_ (whatever that means). You might be asked to create a project first. Just do that. Then try again. Fill things:
     - App Information:
         - App name: whatever, e.g., Trackdown
         - User support email: your own email
